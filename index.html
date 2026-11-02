@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ortho Viva Study Guide — Case A Z.C.K. &amp; Case B W.T.N.</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ortho Viva">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#B8325E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#F3F6F9; --surface:#FFFFFF; --ink:#18212F; --muted:#586477; --line:#D9E0E8; --hover:#EAF0F6;
+  --caseA:#B8325E; --caseA-soft:#FBE8EF;
+  --caseB:#0B7477; --caseB-soft:#DCF2F1;
+  --topic:#2F57B0; --topic-soft:#E6EDFB;
+  --ceph:#B4470F; --ceph-soft:#FDEBDD;
+  --hb:#5B44B2; --hb-soft:#EDE9FB;
+  --test:#7A4F00; --test-soft:#FFF2CC;
+  --ans:#1D6E43; --ans-soft:#E2F3E8;
+  --trap:#B83227; --trap-soft:#FCE5E2;
+  --warn:#9A4D00; --warn-soft:#FDEBD8;
+  --mark:#FFE36E; --mark-ink:#18212F;
+  --bone:#7C8796; --soft:#A7B1BE; --dim:#C9D1DB;
+  --shadow:0 1px 2px rgba(24,33,47,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#0F141B; --surface:#17202B; --ink:#E6EBF2; --muted:#9AA6B7; --line:#2A3544; --hover:#1E2936;
+    --caseA:#F27FA4; --caseA-soft:#3A1E2A; --caseB:#53CFC6; --caseB-soft:#11302F;
+    --topic:#8DB0F7; --topic-soft:#1C2A45; --ceph:#FB9A5B; --ceph-soft:#3A2416;
+    --hb:#B3A1F7; --hb-soft:#2A2446;
+    --test:#F2C35E; --test-soft:#3A2F12; --ans:#74D6A0; --ans-soft:#14301F;
+    --trap:#F2897D; --trap-soft:#3B1D1A; --warn:#F5B26B; --warn-soft:#3A2814;
+    --mark:#6E5A00; --mark-ink:#FFF5C7; --bone:#8E9AAB; --soft:#6C788A; --dim:#3A4657; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#0F141B; --surface:#17202B; --ink:#E6EBF2; --muted:#9AA6B7; --line:#2A3544; --hover:#1E2936;
+  --caseA:#F27FA4; --caseA-soft:#3A1E2A; --caseB:#53CFC6; --caseB-soft:#11302F;
+  --topic:#8DB0F7; --topic-soft:#1C2A45; --ceph:#FB9A5B; --ceph-soft:#3A2416;
+  --hb:#B3A1F7; --hb-soft:#2A2446;
+  --test:#F2C35E; --test-soft:#3A2F12; --ans:#74D6A0; --ans-soft:#14301F;
+  --trap:#F2897D; --trap-soft:#3B1D1A; --warn:#F5B26B; --warn-soft:#3A2814;
+  --mark:#6E5A00; --mark-ink:#FFF5C7; --bone:#8E9AAB; --soft:#6C788A; --dim:#3A4657; --shadow:none;
+}
+:root{ box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+*,*::before,*::after{ box-sizing:inherit; }
+html{ scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px); }
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Atkinson Hyperlegible","Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+  font-size:17px; line-height:1.55;
+}
+body::before{ content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); z-index:10; background:var(--surface); }
+a{ color:var(--topic); }
+mark{ background:var(--mark); color:var(--mark-ink); padding:0 .15em; border-radius:2px; }
+strong{ font-weight:700; }
+button{ font:inherit; color:inherit; }
+:focus-visible{ outline:3px solid var(--topic); outline-offset:2px; }
+
+.bar{ position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--surface); border-bottom:1px solid var(--line);
+  display:flex; flex-wrap:wrap; gap:8px 12px; align-items:center; padding:10px 18px; }
+.bar h1{ font-size:1.05rem; margin:0 12px 0 0; white-space:nowrap; }
+.bar h1 span{ color:var(--muted); font-weight:400; }
+.search{ flex:1 1 220px; min-width:160px; max-width:360px; }
+.search input{ width:100%; padding:8px 12px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); font:inherit; font-size:.95rem; }
+.toggle{ display:inline-flex; align-items:center; gap:6px; padding:7px 12px; border-radius:999px; border:1px solid var(--line); background:var(--surface); cursor:pointer; font-size:.9rem; }
+.toggle[aria-pressed="true"]{ background:var(--ink); color:var(--surface); border-color:var(--ink); }
+.bar .count{ font-size:.85rem; color:var(--muted); margin-left:auto; }
+
+.layout{ display:grid; grid-template-columns:250px minmax(0,1fr); gap:28px; max-width:1240px; margin:0 auto; padding:22px 18px 80px; }
+nav.side{ position:sticky; top:calc(env(safe-area-inset-top,0px) + 76px); align-self:start; max-height:calc(100vh - 100px); overflow:auto; }
+nav.side a{ display:flex; justify-content:space-between; gap:8px; text-decoration:none; color:var(--ink); padding:8px 10px; border-radius:8px; border-left:4px solid transparent; font-size:.95rem; }
+nav.side a:hover{ background:var(--hover); }
+nav.side a .p{ font-size:.8rem; color:var(--muted); white-space:nowrap; }
+nav.side a[data-c="A"]{ border-left-color:var(--caseA); }
+nav.side a[data-c="B"]{ border-left-color:var(--caseB); }
+nav.side a[data-c="T"]{ border-left-color:var(--topic); }
+nav.side a[data-c="C"]{ border-left-color:var(--ceph); }
+nav.side a[data-c="H"]{ border-left-color:var(--hb); }
+nav.side a[data-c="F"]{ border-left-color:var(--trap); }
+nav.side .sub{ padding-left:22px; font-size:.86rem; color:var(--muted); }
+main{ min-width:0; max-width:920px; }
+
+section.sec{ margin:0 0 44px; }
+.sechead{ display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; border-bottom:3px solid var(--line); padding-bottom:8px; margin-bottom:16px; }
+.sechead h2{ margin:0; font-size:1.6rem; line-height:1.2; }
+.sec[data-c="A"] .sechead{ border-color:var(--caseA); }
+.sec[data-c="B"] .sechead{ border-color:var(--caseB); }
+.sec[data-c="T"] .sechead{ border-color:var(--topic); }
+.sec[data-c="C"] .sechead{ border-color:var(--ceph); }
+.sec[data-c="H"] .sechead{ border-color:var(--hb); }
+.sec[data-c="F"] .sechead{ border-color:var(--trap); }
+.lead{ font-size:1.02rem; margin:0 0 16px; max-width:72ch; }
+h3{ font-size:1.15rem; margin:28px 0 10px; }
+.progress{ font-size:.85rem; color:var(--muted); }
+.progress b{ color:var(--ink); }
+
+.legend{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 18px; }
+.chip{ display:inline-flex; align-items:center; gap:5px; padding:2px 10px; border-radius:999px; font-size:.82rem; font-weight:700; line-height:1.6; white-space:nowrap; }
+.c-A{ background:var(--caseA-soft); color:var(--caseA); }
+.c-B{ background:var(--caseB-soft); color:var(--caseB); }
+.c-T{ background:var(--topic-soft); color:var(--topic); }
+.c-C{ background:var(--ceph-soft); color:var(--ceph); }
+.c-hb{ background:var(--hb-soft); color:var(--hb); font-weight:400; }
+.c-test{ background:var(--test-soft); color:var(--test); }
+.c-ans{ background:var(--ans-soft); color:var(--ans); }
+.c-trap{ background:var(--trap-soft); color:var(--trap); }
+.c-warn{ background:var(--warn-soft); color:var(--warn); }
+.c-gray{ background:var(--hover); color:var(--muted); }
+.c-hy{ background:var(--mark); color:var(--mark-ink); }
+
+.q{ background:var(--surface); border:1px solid var(--line); border-left:6px solid var(--topic); border-radius:10px; padding:14px 18px; margin:0 0 14px; box-shadow:var(--shadow); }
+.q[data-c="A"]{ border-left-color:var(--caseA); }
+.q[data-c="B"]{ border-left-color:var(--caseB); }
+.q[data-c="C"]{ border-left-color:var(--ceph); }
+.q.done{ opacity:.72; }
+.qtop{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-bottom:6px; }
+.qtop .spacer{ flex:1; }
+.tick{ display:inline-flex; align-items:center; gap:6px; font-size:.85rem; color:var(--muted); cursor:pointer; }
+.tick input{ width:18px; height:18px; accent-color:var(--ans); }
+.qtext{ font-weight:700; font-size:1.06rem; margin:2px 0 10px; }
+.testing{ background:var(--test-soft); border-radius:8px; padding:8px 12px; margin:0 0 10px; font-size:.95rem; }
+.testing b{ color:var(--test); }
+.answer{ border-left:3px solid var(--ans); padding:2px 0 2px 12px; margin:0 0 10px; }
+.answer .lab{ color:var(--ans); font-weight:700; font-size:.9rem; }
+.answer ul{ margin:4px 0 0; padding-left:20px; }
+.answer li{ margin:3px 0; }
+.answer.plain{ border-left:0; padding-left:0; }
+.hbrow{ display:flex; flex-wrap:wrap; gap:6px; align-items:center; }
+.hbrow .lab{ font-size:.85rem; color:var(--hb); font-weight:700; margin-right:2px; }
+.reveal{ display:none; border:1px dashed var(--ans); color:var(--ans); background:transparent; border-radius:8px; padding:6px 12px; cursor:pointer; font-size:.9rem; margin-bottom:8px; }
+body.selftest .q:not(.open) .testing, body.selftest .q:not(.open) .answer{ display:none; }
+body.selftest .q:not(.open) .reveal{ display:inline-block; }
+.hidden{ display:none !important; }
+
+.q.model{ border-left-width:8px; }
+.mtitle{ font-weight:700; font-size:1.12rem; margin:2px 0 10px; }
+.steps{ display:grid; gap:10px; margin:4px 0 12px; }
+.step{ display:grid; grid-template-columns:118px 1fr; gap:12px; align-items:start; }
+.step > .chip{ justify-self:start; margin-top:2px; }
+.step p{ margin:0 0 4px; }
+.step ul{ margin:2px 0 0; padding-left:20px; }
+.step li{ margin:2px 0; }
+.fu{ background:var(--hover); border-radius:8px; padding:10px 14px; margin:0 0 10px; }
+.fu .lab{ font-weight:700; font-size:.9rem; color:var(--muted); }
+.fu p{ margin:6px 0; }
+.fu .fq{ font-style:italic; }
+
+.tw{ overflow-x:auto; margin:6px 0 16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+table{ border-collapse:collapse; width:100%; font-size:.92rem; }
+th,td{ text-align:left; vertical-align:top; padding:8px 12px; border-bottom:1px solid var(--line); }
+th{ background:var(--hover); font-weight:700; white-space:nowrap; }
+tr:last-child td{ border-bottom:0; }
+td.num{ white-space:nowrap; font-variant-numeric:tabular-nums; }
+td.big{ background:var(--trap-soft); color:var(--trap); font-weight:700; }
+td.odd{ background:var(--warn-soft); color:var(--warn); font-weight:700; }
+
+.fix{ display:grid; grid-template-columns:auto 1fr; gap:4px 14px; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin:0 0 10px; }
+.fix .sev{ grid-row:span 3; align-self:start; }
+.fix .issue{ font-weight:700; }
+.fix .where{ font-size:.86rem; color:var(--muted); }
+.fix .do{ font-size:.95rem; }
+.fix .do b{ color:var(--ans); }
+.resolved{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 14px; }
+
+.box{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 18px; margin:0 0 14px; }
+.box.A{ border-top:5px solid var(--caseA); }
+.box.B{ border-top:5px solid var(--caseB); }
+.box.note{ border-left:5px solid var(--hb); }
+.box.cephnote{ border-left:5px solid var(--ceph); }
+.box.trap{ border-left:5px solid var(--trap); background:var(--trap-soft); }
+.box h4{ margin:0 0 6px; font-size:1.02rem; }
+.box p{ margin:6px 0; }
+.box ul{ margin:6px 0; padding-left:20px; }
+.flow{ list-style:none; padding:0; margin:0 0 16px; display:grid; gap:8px; }
+.flow li{ display:grid; grid-template-columns:72px 1fr; gap:12px; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px 14px; }
+.flow .t{ font-weight:700; color:var(--topic); font-variant-numeric:tabular-nums; }
+.formula{ font-family:"Cambria Math","STIX Two Math","Times New Roman",serif; font-size:1.1rem; background:var(--hover); border-radius:8px; padding:10px 14px; margin:8px 0; overflow-x:auto; }
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+
+.cards{ display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:10px; }
+.card{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px; cursor:pointer; text-align:left; display:flex; flex-direction:column; gap:8px; min-height:120px; }
+.card .n{ font-size:.8rem; color:var(--muted); }
+.card .fa{ display:none; border-top:1px dashed var(--line); padding-top:8px; color:var(--ans); }
+.card.open .fa{ display:block; }
+.card .hint{ font-size:.8rem; color:var(--muted); margin-top:auto; }
+.card.open .hint{ display:none; }
+
+/* ceph explorer */
+.ceph{ display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:16px; align-items:start; margin:0 0 18px; }
+.cephfig{ background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:8px; position:sticky; top:calc(env(safe-area-inset-top,0px) + 80px); }
+.cephfig svg{ width:100%; height:auto; display:block; }
+.cephfig .cap{ font-size:.8rem; color:var(--muted); padding:4px 8px 2px; }
+svg .outline{ fill:none; stroke:var(--bone); stroke-width:1.6; stroke-linejoin:round; stroke-linecap:round; }
+svg .outline.st{ stroke:var(--soft); stroke-dasharray:0; }
+svg .tooth{ fill:var(--hover); stroke:var(--bone); stroke-width:1.4; }
+svg .pl{ stroke:var(--dim); stroke-width:1.3; stroke-dasharray:5 4; fill:none; }
+svg .pl.on{ stroke:var(--ceph); stroke-width:2.6; stroke-dasharray:0; }
+svg .aux{ stroke:var(--ceph); stroke-width:2; stroke-dasharray:3 3; fill:none; display:none; }
+svg .aux.on{ display:inline; }
+svg .arc{ fill:none; stroke:var(--ceph); stroke-width:2.2; }
+svg .pt circle{ fill:var(--surface); stroke:var(--ink); stroke-width:1.6; cursor:pointer; }
+svg .pt text{ font-size:12px; font-weight:700; fill:var(--muted); paint-order:stroke; stroke:var(--surface); stroke-width:3px; cursor:pointer; }
+svg .pt.on circle{ fill:var(--ceph); stroke:var(--ceph); }
+svg .pt.on text{ fill:var(--ceph); }
+svg .pt.soft circle{ stroke:var(--soft); }
+.cephgallery{ display:none; }
+.print-only-g{ display:none; }
+@media print{ .print-only-g{ display:block; } }
+.cephgallery figure{ margin:0; border:1px solid var(--line); border-radius:8px; padding:6px; break-inside:avoid; }
+.cephgallery figcaption{ font-size:.8rem; padding:2px 4px; }
+.cephctl{ display:flex; flex-direction:column; gap:10px; }
+.grp{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+.grp .gl{ font-size:.82rem; font-weight:700; color:var(--muted); margin-bottom:6px; }
+.grp .btns{ display:flex; flex-wrap:wrap; gap:6px; }
+.mbtn{ border:1px solid var(--line); background:var(--bg); border-radius:999px; padding:4px 11px; font-size:.86rem; cursor:pointer; }
+.mbtn[aria-pressed="true"]{ background:var(--ceph); color:#fff; border-color:var(--ceph); }
+.panel{ background:var(--surface); border:1px solid var(--line); border-top:5px solid var(--ceph); border-radius:10px; padding:14px 16px; }
+.panel h4{ margin:0 0 4px; font-size:1.1rem; }
+.panel .kind{ font-size:.8rem; color:var(--ceph); font-weight:700; }
+.panel p{ margin:6px 0; }
+.panel .vals{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin:10px 0; }
+.panel .v{ border-radius:8px; padding:8px 10px; font-size:.9rem; }
+.panel .v.A{ background:var(--caseA-soft); }
+.panel .v.B{ background:var(--caseB-soft); }
+.panel .v b{ display:block; font-size:.78rem; }
+.panel .v.A b{ color:var(--caseA); } .panel .v.B b{ color:var(--caseB); }
+.panel .v .n{ font-size:1.05rem; font-weight:700; font-variant-numeric:tabular-nums; }
+.panel .norms{ display:flex; flex-wrap:wrap; gap:6px; margin:6px 0; }
+.panel .trapline{ background:var(--trap-soft); border-radius:8px; padding:8px 10px; font-size:.92rem; margin:8px 0; }
+.panel .trapline b{ color:var(--trap); }
+
+@media (max-width:980px){ .ceph{ grid-template-columns:1fr; } .cephfig{ position:static; } }
+@media (max-width:900px){
+  .layout{ grid-template-columns:1fr; padding-top:12px; }
+  nav.side{ position:static; max-height:none; display:flex; overflow-x:auto; gap:6px; padding-bottom:6px; }
+  nav.side a{ border-left:0; border-bottom:3px solid transparent; white-space:nowrap; background:var(--surface); }
+  nav.side a[data-c="A"]{ border-bottom-color:var(--caseA); } nav.side a[data-c="B"]{ border-bottom-color:var(--caseB); }
+  nav.side a[data-c="T"]{ border-bottom-color:var(--topic); } nav.side a[data-c="C"]{ border-bottom-color:var(--ceph); }
+  nav.side a[data-c="H"]{ border-bottom-color:var(--hb); } nav.side a[data-c="F"]{ border-bottom-color:var(--trap); }
+  nav.side a .p, nav.side .sub{ display:none; }
+  .bar h1 span{ display:none; } .bar .count{ margin-left:0; }
+  .grid2{ grid-template-columns:1fr; }
+}
+@media (max-width:600px){ .step{ grid-template-columns:1fr; gap:4px; } .panel .vals{ grid-template-columns:1fr; } }
+@media print{
+  .bar, nav.side, .reveal, .tick, .cephctl .grp{ display:none !important; }
+  .layout{ display:block; } .cephfig{ position:static; }
+  body.selftest .q .testing, body.selftest .q .answer{ display:block !important; }
+  .q, .fix, .box{ break-inside:avoid; }
+  .cephgallery{ display:grid !important; grid-template-columns:repeat(3,1fr); gap:8px; margin:10px 0; }
+  .card .fa{ display:block !important; } .card .hint{ display:none !important; }
+  .ceph{ display:none !important; } .sec{ break-before:page; } .sec:first-child{ break-before:auto; }
+  body{ font-size:13px; background:#fff; } body::before{ display:none; } .tw{ overflow:visible; } th{ white-space:normal; }
+}
+@media (prefers-reduced-motion: reduce){ *{ scroll-behavior:auto !important; } }
+</style>
+</head>
+<body>
+<div class="bar" role="toolbar" aria-label="Study tools">
+  <h1>Ortho viva study guide <span>Case A Z.C.K. · Case B W.T.N.</span></h1>
+  <div class="search"><input id="q" type="search" placeholder="Search, e.g. torque, Wits, nasion, TAD" aria-label="Search questions"></div>
+  <button class="toggle" id="tSelf" aria-pressed="false">Self-test: hide answers</button>
+  <button class="toggle" id="tHy" aria-pressed="false">High-yield only</button>
+  <button class="toggle" id="tTodo" aria-pressed="false">Not yet revised</button>
+  <button class="toggle" id="tTheme" aria-pressed="false" title="Switch light or dark">Dark</button>
+  <span class="count" id="count"></span>
+</div>
+<div class="layout">
+  <nav class="side" id="nav" aria-label="Sections"></nav>
+  <main id="main"></main>
+</div>
+<script>
+/* ===================== CASE CONTENT (updated records, 26/10/2026) ===================== */
+const HB_NOTE = "Page numbers are the PDF pages of the uploaded Handbook of Orthodontics (Cobourne & DiBiase, 3rd ed., 1,431-page ebook). Figure, box and “Where is the evidence” (WITE) numbers match the printed book.";
+
+const SCRIPT_A = "Z.C.K. is a 13-year-9-month-old Chinese boy at bond-up, in his pubertal growth spurt (voice change 3 months later), who complained that his upper front teeth stuck out. He has a <mark>Class II division 1 incisor relationship with a 5 mm overjet on a Class I skeletal base</mark> (ANB 2.6°, Mills-corrected ≈ 3.8°, Wits +1.6 mm) with average vertical proportions (MMPA 26°, LAFH 54.5%). Molars and canines are Class I. Crowding is 2.2 mm upper and <mark>6.2 mm lower</mark>, with a 4–5 mm curve of Spee and <mark>bimaxillary protrusion</mark>: upper incisors 122.8°, lower 102.3°, L1–APog 7.2 mm and lower lip 5 mm ahead of the E-line. I extracted four first premolars and used conventional MBT 0.022-inch twin brackets with Class II elastics. At 30 months the crowding is relieved, spaces are closed and the overjet is about 2 mm, but the <mark>upper incisors are over-retroclined at 91.9°</mark>, the overbite has deepened and the right molar has slipped to half-unit Class II. I’d like to discuss re-establishing torque and finishing.";
+const SCRIPT_B = "W.T.N. is a 13-year-2-month-old Chinese girl, 6 months post-menarche with CVM stage CS5, who complained that her upper front teeth were crooked and stuck out and her lower teeth were crowded. She has a <mark>Class II division 1 incisor relationship with a 7.2 mm overjet</mark> (IOTN 4a) on a <mark>mild Class II skeletal base</mark> (ANB 4.5°, Mills-corrected ≈ 5.5°, Wits +2.3 mm) and a <mark>high-angle pattern (MMPA 35.3°)</mark>. Crowding is 2.3 mm upper and about 5 mm lower, with <mark>bimaxillary protrusion, incompetent lips</mark>, an acute nasolabial angle of 66.9° and the lower lip 4.8 mm ahead of the E-line. She declined surgery and preferred aligners, but accepted four first-premolar extractions with passive self-ligating MBT 0.022-inch appliances and light Class II elastics. At 18.5 months the overjet and overbite are normal and her lips are competent, but the incisors have retroclined beyond plan, the left canine is half-unit Class II with a lateral open bite at 35, and there is spacing at 41–43. I expect to debond in about 6 months.";
+
+/* ---------- Model answers ---------- */
+const MODEL = {
+ A:[
+  {id:"A-T1",title:"Theme 1: Why four first premolars with Class I buccal segments and a Class I skeletal base?",
+   ack:["Molars, canines and skeletal base were Class I, so ==extraction was for crowding and protrusion==, not Class II correction."],
+   exp:["• ==Lower==: 6.2 mm crowding + 4–5 mm curve of Spee (~2–2.5 mm) + incisor retraction for bimaxillary protrusion (L1–APog 7.2 mm, L1–MP 102.3°, lower lip +5 mm) → need ≈ ==10–14 mm vs 14 mm== → high lower anchorage.","• ==Upper==: 2.2 mm crowding + overjet 5 → 2.5 mm (~5 mm) → need ≈ ==7 mm vs 14 mm== → low upper anchorage.","Lower-only extraction would retract the lower canines and incisors, making the canines Class II and ==increasing the overjet==, so the upper arch also needed space."],
+   cite:["Table 8.5: moderate crowding (5–8 mm) → first or second premolars; bimaxillary protrusion is a classic four-premolar indication; Box 8.6 space analysis."],
+   ref:["The decision was sound; the ==anchorage plan was not==. My appraisal says upper demand was lower than planned. Class II elastics protected upper anchorage I didn’t need and spent lower anchorage I did need.","Next time: a written per-arch anchorage plan, ==no Class II elastics during space closure==, controlled upper molar protraction on a full-size wire, and lower anchorage support (or accept a planned half-unit Class II molar finish)."],
+   fu:[["Why not a functional appliance during his growth spurt?","Skeletal Class I (ANB 2.6°, corrected ≈ 3.8°) with Class I buccal segments. A functional would procline lower incisors that were already 102.3° and 7.2 mm ahead of A–Pog."],["What is his IOTN?","Overjet 5 mm with competent lips is 2a, as recorded. But the 41/31 contact displacement is likely 3d (2–4 mm) or 4d (> 4 mm), so grade on that."]],
+   h:["Box 8.6 p507–508","Table 8.5 p516","p513","Bimax protrusion p921–923","Anchorage p336–343","IOTN p108"]},
+  {id:"A-T2",title:"Theme 2: ~31° upper incisor torque loss and a deepened overbite",
+   ack:["Upper incisors ==122.8° → 91.9°== (~4 SD below the Chinese norm), interincisal ==108.9° → 145.6°==, L1–APog 7.2 → 0.8 mm, overbite ~2 → 3 mm."],
+   exp:["• ==Torque play==: en-masse sliding began on 0.017 × 0.025 SS (~18–20° play) and moved to 0.019 × 0.025 only later (~9–12°) → MBT +17° largely not expressed; force labial to the centre of resistance tipped the crowns palatally.","• ==Class II elastics== added palatal crown tipping.","• ==Excess upper space== (~7 mm need vs 14 mm) closed from the front instead of from behind.","Retroclined incisors deepen the bite and use less arch length, leaving residual Class II canine tendencies."],
+   cite:["Handbook: 9° of play even with 0.019 × 0.025 in a 0.022 × 0.028 slot (p686); torque is a major root-resorption risk."],
+   ref:["==Periapicals first==, then palatal root torque on 11/21 in ==0.019 × 0.025 SS or TMA== with the arch tied back.","Restore torque ==before== deciding on incisor intrusion: proclining the incisors itself reduces the overbite.","Do arch coordination in a rectangular wire; the planned 0.018 round SS stage would give up torque control."],
+   fu:[["Why reposition the 11 and 21 brackets?","Placing them more incisally intrudes the incisors when the wire is engaged. Alternatives: an intrusion arch or anterior TADs."],["What happens to the overjet when you re-torque?","It may increase slightly and spaces may reopen, because labial crown movement lengthens the arch."]],
+   h:["Prescriptions p677–686","9° play p686","p496–498","Recession p916","Overbite p931–939","Root resorption p303–306"]},
+  {id:"A-T3",title:"Theme 3: Right molar slipping from Class I to half-unit Class II",
+   ack:["Started Class I bilaterally; now ==right molar ½ unit Class II==, right canine near Class I, left side Class I."],
+   exp:["With four premolars out, the molars stay Class I only if upper and lower molars ==protract equally==.","Upper demand was low (~7 of 14 mm), so the upper right molar came forward more than the lower right: ==predictable anchorage loss==.","Asymmetry suggests uneven elastic wear or force between the sides; check the centrelines."],
+   cite:["Anchorage loss p350–351; planning the buccal occlusion p528; a Class II molar finish is acceptable if the canines are Class I."],
+   ref:["Light right Class II elastics on rectangular SS with ==anchorage reinforcement== (13–23 tie, tip-back bends at the 7s) or a ==right buccal TAD== to retract the upper right segment.","Sequence anchorage before torque reinstatement; accept a ==half-unit Class II molar== if canines are Class I and interdigitated."],
+   fu:[["Won’t more Class II elastics deepen the bite further?","Yes, they extrude upper incisors, so keep them short and light, or use a TAD instead."],["Why derotate 26?","A mesiopalatally rotated molar takes up arch length; derotating with a lingual button or TPA improves the left occlusion."]],
+   h:["Anchorage loss p350–351","p528","Molar relation p63–64","Palatal arches p661–663","Ch 11 p725–727"]},
+  {id:"A-T4",title:"Theme 4: ANB rose 2.6 → 6.2° with SNB unchanged: explain",
+   ack:["SNA rose ==78.7 → 82°== while SNB stayed ==76.1 → 75.8°==, so ANB rose 3.6°. My appraisal still blames nasion placement, but the retraced films both pass the sella check (SN–MxP 9.9°, 8.2°)."],
+   exp:["• The change is ==confined to point A==: the mandible and vertical are stable (MMPA 26 → 27.4°; SN–MP ≈ 35.9 → 35.6°).","• Uncontrolled palatal crown tipping rotates the incisor about a point in the root, so the ==root apex moves labially== and A point remodels forward → SNA and ANB rise without skeletal change.","• Mills now applies: T0 SNA 78.7° → corrected ANB ≈ ==3.8° (Class I)==; T1 SNA 82° → ≈ 5.7°.","• Wits +1.6 → +2.7 mm also reflects occlusal-plane change."],
+   cite:["Handbook: A point remodels with incisor movement (p461); Mills’ correction and sella check (p428–429); Wits depends on the occlusal plane (p431)."],
+   ref:["Update the appraisal: attribute the ANB rise to ==A-point remodelling from incisor root movement==, not nasion. Show it on the maxillary superimposition.","Palatal root torque will move the apices, and A point, back; re-check ANB after torque correction."],
+   fu:[["Is he now skeletal Class II?","No: SNB and the mandibular plane are stable and the change is at A point, which is dentoalveolar."],["Your record calls the lower face height increased. Is it?","Not on the retraced ceph: LAFH 54.5% and MMPA 26° are average. I’d correct the summary and extra-oral entries."]],
+   h:["A point p461","Mills p428–429","Wits p429–431","Maxillary superimposition p472–476"]}
+ ],
+ B:[
+  {id:"B-T1",title:"Theme 1: Why four first premolars in this high-angle girl?",
+   ack:["Indications are now clear: ==overjet 7.2 mm, crowding 2.3 mm upper and ~5 mm lower, bimaxillary protrusion with incompetent lips==."],
+   exp:["• ==Upper==: crowding 2.3 mm (75.4 − 73.1) + overjet 7.2 → 2.5 mm (~9.4 mm) + half-unit canine correction → need ≈ ==12 mm vs 14 mm== → moderate–high anchorage.","• ==Lower==: crowding 4.9 mm + 3 mm curve of Spee (~1.5 mm) + retraction for the lips → need ≈ 8–10 mm vs 14 mm.","High angle: non-extraction expansion or proclination would worsen lip incompetence and open the bite.","CVM CS5, post-menarche → ==no growth modification==; aligners less predictable for bodily retraction and torque."],
+   cite:["Box 8.6 space analysis; Table 8.5; bimaxillary protrusion p921; WITE 2.2 lip change after extraction p101; CVM p237–241; WITE 14.1 p999."],
+   ref:["Upper anchorage demand was high, so it should have been supported with ==TADs, not Class II elastics==, in a high-angle case.","Your record now lists ==U4/L5 as the alternative==. Why not choose it? With 4.8 mm lower crowding and the lower lip +4.8 mm, lower first premolars gave more retraction; but U4/L5 would have spared the lower incisors (now 81.9°) and helped the left Class II."],
+   fu:[["Will extraction flatten her profile?","Lip changes after four-premolar extraction are small and usually favourable (WITE 2.2). Lower lip 4.8 → 1.2 mm; the norm at 13 years is about −2.5 mm, so she is still slightly protrusive."],["Does extraction help the vertical (wedge theory)?","Evidence is weak; extraction was chosen for protrusion, not as a vertical tool."]],
+   h:["Box 8.6 p507–508","Table 8.5 p516","Bimax p921","WITE 2.2 p101","CVM p237–241","E-line p457"]},
+  {id:"B-T2",title:"Theme 2: Was the vertical really controlled with Class II elastics in a high angle?",
+   ack:["The record says ==MMPA 35.3° → 35.3°, vertical control maintained==. On the retraced ceph I’d say it more carefully."],
+   exp:["• ==SN–MxP rose 8 → 11°== while MMPA stayed 35.3°, so the ==mandibular plane rotated ~3° clockwise relative to SN== (SN–MP ≈ 43.3 → 46.3°).","• SNB fell 74.5 → 73° and ANB rose 4.5 → 5.1°: consistent with clockwise rotation, though near method error.","• Mechanism: Class II elastics extrude lower molars and upper incisors; high-angle muscles resist this less.","• Clinical signs: ==lateral open bite at 35==, lingually tilted lower molars."],
+   cite:["Ch 6 elastics p342–344; anchorage loss with vertical growth p351; Ch 9 caution in high angle p600; MMPA p432."],
+   ref:["MMPA alone can hide a rotation when both planes move together. Confirm on the overall superimposition and rephrase the appraisal.","Keep elastics light and short (the record now says “light”); use ==TADs== if more anchorage or intrusion is needed. Close the 35 open bite with bracket height check, levelling and short vertical elastics."],
+   fu:[["MMPA didn’t change, so you’re fine?","MMPA measures the maxillary to the mandibular plane; if both rotate clockwise together it stays the same. SN–MxP +3°, SNB −1.5° and ANB +0.6° tell the real story."],["How would TADs help?","Absolute anchorage without extrusion; posterior TADs can intrude upper molars → counter-clockwise rotation."]],
+   h:["Elastics p342–344","p351","p600","MMPA p432","Ch 11 p725–730"]},
+  {id:"B-T3",title:"Theme 3: Incisor over-retroclination and spacing at 41–43",
+   ack:["Upper incisors ==121.9° → 103°== (~2.5 SD below the Chinese norm), lower ==92.9° → 81.9°==, interincisal 109.9° → 139.8°; spacing at 41–43."],
+   exp:["• ==Torque play==: even on 0.019 × 0.025 SS there is ~9–12° of play during en-masse sliding.","• ==Class II elastics== tip upper crowns palatally.","• Lower space closed mainly by incisor retraction; ==the 41–43 spacing is residual extraction space==, not a Bolton effect (mandibular anterior excess would make lower spacing less likely)."],
+   cite:["Handbook: 9° of play even with 0.019 × 0.025 (p686). In a high angle the compensated lower incisor norm is 120 − MMPA ≈ ==84.7°==, so 81.9° is only ~3° below."],
+   ref:["Close 41–43 by ==protracting the lower buccal segments== (tie the labial segment; TADs if needed) and add labial crown torque to the lower incisors.","Lower IPR has now been ==dropped from the plan==, which is right: it would add lower space to close and drive further retroclination.","Own the irony: I chose fixed appliances “for torque control” and still lost torque on 0.019 × 0.025; the fix is power arms near the centre of resistance, added palatal root torque, and ==not stepping back to 0.017 × 0.025== as my plan says."],
+   fu:[["Is an interincisal angle of 139.8° stable?","Upright incisors favour a deep bite and overbite relapse; keep the overbite controlled and retain with bonded retainers."],["Why is the left side still Class II?","A bilateral Bolton excess can’t explain a unilateral problem; left-sided anchorage loss or uneven elastic wear is more likely."]],
+   h:["Prescriptions p677–686","Space closure p696–700","L1 norm p436","Bolton p385","Seventh key p533–536"]},
+  {id:"B-T4",title:"Theme 4: How do you classify her skeletal base now?",
+   ack:["Retraced T0: ==SNA 79°, SNB 74.5°, ANB 4.5°, SN–MxP 8°== (valid), Wits +2.3 mm. The summary says “Class II base with a mild Class II tendency”; the extra-oral page still says “Class I with a mild Class II tendency”."],
+   exp:["• Table 7.4: ANB ==> 4° = Class II==.","• Mills now applies: SNA 79° → add 1° → corrected ANB ==≈ 5.5°==.","• Wits +2.3 mm (female norm 0 mm) agrees; SNB 74.5° (−1.5 SD) shows ==mandibular retrusion==.","• High angle (MMPA 35.3°) adds to the convexity and chin retrusion."],
+   cite:["Handbook Table 7.4 (ANB classes); Mills’ correction p428–429; Wits sex norms p431."],
+   ref:["Say it the same way everywhere: ==“mild Class II skeletal base due to mandibular retrusion, high angle”==. “Class II base with a mild Class II tendency” is circular.","Camouflage was still right: CVM CS5, post-menarche, surgery declined."],
+   fu:[["Does it change your plan?","No, but it strengthens the case for upper anchorage support (TADs) and the U4/L5 alternative you recorded."],["The appraisal says ANB was unchanged. Was it?","No: 4.5 → 5.1°. I’d correct the narrative and appraisal."]],
+   h:["Table 7.4 p428","Mills p428–429","Wits p431"]}
+ ]
+};
+
+/* ---------- Question banks ---------- */
+const CASE_A = [
+ {id:"A1",cat:"Diagnosis",hy:true,q:"What is his IOTN, and is 2a the right grade?",t:"The highest-scoring trait decides the grade.",a:["Overjet 3.6–6 mm ==with competent lips is 2a== (3a would need incompetent lips), as your record now says.","The ==41/31 contact-point displacement== drives the grade: 2–4 mm = 3d, > 4 mm = 4d. Always quote the highest-scoring trait."],h:["IOTN p105–108","DHC grades p108"]},
+ {id:"A2",cat:"Diagnosis",hy:true,q:"Classify the skeletal pattern.",a:["ANB 2.6° = ==Class I== (Table 7.4: 2–4°).","Retraced SN–MxP 9.9° passes the sella check, so ==Mills applies==: SNA 78.7° → add 1.15° → corrected ANB ≈ 3.8°, still Class I.","Wits +1.6 mm (male norm ≈ −1 mm) hints at a mild Class II tendency.","Vertical: ==MMPA 26°, LAFH 54.5% → average==; your record still says “increased” lower face height."],h:["Table 7.4 p428","p428–429","Wits p431","Vertical p432–433"]},
+ {id:"A3",cat:"Diagnosis",q:"He was in his growth spurt. How did growth affect your plan?",a:["Voice change around peak height velocity → CS3–4.","With a ==Class I skeletal base and Class I buccal segments==, growth modification wasn’t indicated; a functional appliance would procline already proclined lower incisors.","Growth still matters for vertical control and for finishing the right molar."],h:["Ch 4 p231–241","Ch 9 timing p583–590"]},
+ {id:"A4",cat:"Diagnosis",hy:true,q:"What is bimaxillary protrusion, and how did you diagnose it here?",a:["Proclined upper and lower incisors with protrusive lips on a usually Class I base.","Here: ==U1–MxP 122.8°, L1–MP 102.3° (compensated norm 120 − 26 = 94°), interincisal 108.9°, L1–APog 7.2 mm, lower lip +5 mm to E-line==.","Treatment: premolar extractions with incisor retraction; stability of the retracted lower incisors needs long-term retention."],h:["Bimax p921–923","L1 norm p436","E-line p457"]},
+ {id:"A5",cat:"Planning",q:"How did you level a 4–5 mm curve of Spee?",a:["Continuous archwires level mainly by premolar extrusion plus some incisor intrusion or proclination; acceptable in an average angle.","Levelling uses lower arch length (part of the space analysis). Alternatives: reverse-curve NiTi, intrusion arch, anterior TADs."],h:["p508–510, Fig 8.6","Overbite p693–696","p931–939"]},
+ {id:"A6",cat:"Planning",q:"The Bolton anterior ratio is 74.4%. What does it mean?",a:["About ==2.5 mm maxillary anterior excess==: expect a small residual overjet or difficulty getting Class I canines once torque is restored.","Options: upper interproximal reduction, a little extra upper torque, or reshaping the laterals. Currently masked by retroclined upper incisors."],h:["Bolton p385","p533–536","p867"]},
+ {id:"A7",cat:"Mechanics",hy:true,q:"Why Class II elastics in a Class I case?",a:["Intended to reinforce upper anchorage during retraction.","But upper demand was ==low== and lower demand ==high==: the elastics held the upper molars back (unneeded) and pulled the lower molars forward (unwanted), and tipped the upper incisors palatally.","Better: no elastics during closure; lower anchorage support; controlled upper protraction."],h:["Elastics p342–344","Anchorage p336–343","p600"]},
+ {id:"A8",cat:"Mechanics",q:"Talk through your archwire sequence.",a:["0.014 → 0.016 → 0.018 NiTi; 0.016 × 0.022 → 0.017 × 0.025 NiTi; en-masse sliding on 0.017 × 0.025 SS, ==later 0.019 × 0.025 SS==, with elastomeric chain.","Be ready: why not 0.019 × 0.025 from the start? MBT recommends it for space closure in a 0.022 slot; the early undersized phase is when torque was lost."],h:["Archwires p647–657","WITE 10.4 p655","Space closure p696–700"]},
+ {id:"A9",cat:"Mechanics",q:"Why lacebacks?",a:["To stop the tipped MBT canine crowns moving forward and proclining the incisors during alignment; reasonable with 6.2 mm lower crowding.","Evidence: ==little effect on incisor position== and possible anchorage loss (Fleming 2013)."],h:["Lacebacks p692–694","Fig 10.54"]},
+ {id:"A18",cat:"Mechanics",q:"Your record now says conventional twin brackets. Why not self-ligating?",a:["Conventional MBT twins with elastomeric or steel ligatures: lower cost, good rotational control, easy to add steel ties for full engagement.","Evidence shows ==no clinical advantage== of self-ligation for treatment time, alignment or visits (WITE 10.3).","Make sure every page says the same; earlier versions said self-ligating."],h:["Brackets p630–647","WITE 10.3 p646"]},
+ {id:"A19",cat:"Finishing",hy:true,q:"The 36 bracket is too gingival, with its mesial marginal ridge 1 mm above 35. What will you do?",t:"Bracket positioning errors and how they show up.",a:["A bracket placed too gingivally ==extrudes the tooth== on a straight wire, leaving a marginal ridge step and a possible interference.","==Rebond 36== at the correct height (your plan lists 12 and 45 but not 36), step back to a flexible wire, then return to the working wire.","Alternative: a step bend, but rebonding is cleaner."],h:["Bracket positioning p676–677","Finishing p699–701"]},
+ {id:"A10",cat:"Mechanics",q:"Your plan uses 0.018 round SS for arch coordination after torque correction. Any concern?",a:["A round wire gives ==no torque control==, so the incisor torque you just restored could be lost.","Coordinate arches in a rectangular wire (e.g. 0.019 × 0.025 SS) with first-order bends at 36 and 46."],h:["Finishing p699–701","Prescriptions p677–686"]},
+ {id:"A11",cat:"Finishing",q:"26 is rotated. How will you correct it?",a:["Lingual button with a cross elastic, or a ==TPA== for rotation control.","Cross elastics can extrude and tip, so use briefly and monitor the occlusion."],h:["Palatal arches p661–663","TPA Fig 6.37 p341"]},
+ {id:"A12",cat:"Complications",q:"What is your root-resorption risk plan?",a:["Risk: extraction, ==30 months== in treatment, large torque change ahead, elastics.","Re-check periapicals ==after torque correction== (your appraisal says this). If > 2 mm or a third lost, pause 2–3 months."],h:["p94–95","p303–306"]},
+ {id:"A13",cat:"Complications",q:"Your record estimates 24–30 months in total, but he is at 30 months with 6–9 months to go. Comment.",a:["Correct the estimate to ==~36–39 months==; average fixed treatment ≈ 20 months.","Longer treatment → resorption, decalcification, gingival problems, burnout. Causes: torque loss, anchorage loss, rotations. Agree a clear end-point."],h:["Duration p701","p530","Failure p100"]},
+ {id:"A14",cat:"Complications",q:"Mild gingival inflammation around the lower anterior brackets: plan?",a:["OHI with interdental brushes; daily ==0.05% NaF rinse==; high-fluoride toothpaste; hygienist."],h:["p92–95"]},
+ {id:"A15",cat:"Complications",q:"The lower right 8 is mesio-angular. What will you do?",a:["Monitor; ==prophylactic removal to prevent late incisor crowding is not supported==. Remove only for pathology or a specific reason."],h:["Third molars p281–284","p817"]},
+ {id:"A16",cat:"Retention",q:"Retention plan and special concerns?",a:["Bonded 3–3 upper and lower + VFRs (full-time 6 months, then nights).","Lower incisors retracted ~6.4 mm (L1–APog 7.2 → 0.8) → ==stability uncertain==; rotated lower incisors favour fixed retention."],h:["Retention p974–990","Fixed retainers p982–984"]},
+ {id:"A17",cat:"Reflection",hy:true,q:"What would you do differently?",a:["==Per-arch anchorage plan== from the space analysis.","No Class II elastics during closure; ==0.019 × 0.025 SS with power arms==.","Progress ceph at ~12 months to catch torque loss.","Accurate ceph interpretation (A-point change) and careful bracket positioning (36)."],h:["Box 8.6 p507","p677–686","p696–700"]}
+];
+
+const CASE_B = [
+ {id:"B1",cat:"Diagnosis",q:"What is her IOTN, and why did she need treatment?",a:["==DHC 4a== (overjet 6.1–9 mm; 7.2 mm). Aesthetic concern, protrusive incompetent lips, trauma risk with an increased overjet."],h:["IOTN p105–108","WITE 12.7 p845"]},
+ {id:"B2",cat:"Diagnosis",hy:true,q:"Classify the skeletal pattern.",a:["ANB 4.5°: Table 7.4 calls > 4° ==Class II==.","Retraced SN–MxP 8° passes the sella check, so ==Mills applies==: SNA 79° → add 1° → corrected ANB ≈ 5.5°.","Wits +2.3 mm (female norm 0 mm) and SNB 74.5° (−1.5 SD) → ==mild Class II from mandibular retrusion==.","Vertical: MMPA 35.3° → ==high angle==; LAFH 56.3%."],h:["Table 7.4 p428","p428–429","Wits p431","Vertical p432–433"]},
+ {id:"B3",cat:"Diagnosis",q:"How did you assess growth?",a:["Menarche about 6 months before treatment and ==CVM CS5== → past the peak (PHV ~1 year before menarche).","So no growth modification; camouflage or surgery only."],h:["p231–241","WITE 4.1 p242"]},
+ {id:"B4",cat:"Diagnosis",hy:true,q:"Why does the high angle matter for your mechanics?",a:["Any molar extrusion (Class II elastics, levelling by extrusion) rotates the mandible clockwise → worse chin and overjet.","Lip incompetence and long lower face worsen with bite opening; anchorage loss happens more easily."],h:["p351","p600","p906","p925"]},
+ {id:"B5",cat:"Diagnosis",q:"Lips were incompetent with an NLA of 66.9°. What changed?",a:["Lips now ==competent==, NLA 66.9° → 81.4° (still acute vs 105 ± 10° in Caucasian females), lower lip 4.8 → 1.2 mm.","Lip competence now depends on the retracted incisor position, so ==long-term retention== matters."],h:["NLA p377","E-line p457","WITE 2.2 p101"]},
+ {id:"B6",cat:"Planning",q:"She preferred aligners. Why fixed appliances?",a:["Four-premolar extraction with a 7.2 mm overjet needs bodily retraction, torque and root control; ==aligners are less predictable== for these.","Be ready: the torque was then lost, so explain what you’d change (0.019 × 0.025 working wire, power arms)."],h:["WITE 14.1 p999","p1029–1032"]},
+ {id:"B7",cat:"Planning",q:"What alternatives did you consider?",a:["No treatment; non-extraction with IPR (would procline and worsen lips); orthognathic surgery after growth (declined); ==extraction with TAD anchorage== (my preferred improvement)."],h:["p489–494","Ch 15 p1086–1098"]},
+ {id:"B8",cat:"Mechanics",q:"Talk through your archwire sequence.",a:["0.014 → 0.016 → 0.018 NiTi (21 bypassed until space was created); 0.016 × 0.022 → 0.017 × 0.025 NiTi; en-masse sliding on ==0.019 × 0.025 SS== with elastomeric chain and light Class II elastics (3/16 inch, 3.5 oz).","Your plan steps back to 0.017 × 0.025 SS after re-levelling: return to ==0.019 × 0.025== to keep torque."],h:["p647–657","WITE 10.4 p655","p696–700"]},
+ {id:"B9",cat:"Mechanics",q:"Why are the lower molars lingually tilted?",a:["Class II elastics pull from ==buccal hooks==, rolling the lower molar crowns lingually and rotating them mesiolingually.","Fix: buccal crown torque (lingual root torque) in a rectangular wire, or slight expansion in the archwire."],h:["Elastics p342–344"]},
+ {id:"B18",cat:"Mechanics",q:"You bypassed 21 at the start. Why?",a:["Engaging a displaced tooth before there is space ==flares and round-trips== the neighbours and pushes the incisors labially.","Bypass with the archwire, create space, then engage 21 with a light flexible wire."],h:["Levelling and aligning p687–692"]},
+ {id:"B19",cat:"Finishing",q:"17 and 27 are buccally tilted and the lower molars lingually tilted. Significance?",a:["Check the ==transverse and curve of Wilson==: buccal upper and lingual lower molars risk non-working interferences and a scissor-bite tendency.","Upper: palatal crown (buccal root) torque on 17/27 in a rectangular wire, or a TPA. Lower: buccal crown torque. Your plan covers the lower molars but ==not 17/27==."],h:["Palatal arches p661–663","Finishing p699–701"]},
+ {id:"B10",cat:"Finishing",hy:true,q:"Lateral open bite at 35 and left canine half-unit Class II. Plan?",a:["Check ==35 bracket height== and the unlevelled curve of Spee; reposition and re-level on a flexible wire.","Short vertical or box elastics to settle; correct the left Class II with differential mechanics or a left TAD rather than heavier elastics."],h:["Bracket positioning p676–677","Finishing p699–701"]},
+ {id:"B11",cat:"Finishing",hy:true,q:"Your aims include Class I canines, but the remaining plan has no step for the left half-unit Class II. How will you correct it?",t:"Examiners notice when an aim has no matching plan.",a:["Add it to the plan: ==differential space closure on the left== (retract 23 against a reinforced posterior unit), a ==left buccal TAD==, or brief light left Class II elastics on rectangular SS with vertical monitoring.","The anterior Bolton excess is bilateral, so it ==can’t explain a one-sided Class II==; check for left anchorage loss and elastic wear.","If it can’t be fully corrected, a half-unit Class II canine on one side may be accepted, but present it as a compromise. Dropping lower IPR was right: it would add space to close."],h:["Anchorage loss p350–351","Buccal occlusion p528","Bolton p385","Ch 11 p725–727"]},
+ {id:"B12",cat:"Finishing",q:"Root angulation at 12, 35 and 43: how will you correct it?",a:["Progress DPT; ==reposition brackets==; step back to a flexible wire, then return to the working wire."],h:["p676–677","p699–701"]},
+ {id:"B13",cat:"Complications",q:"21 has a chipped incisal edge. What would you do?",a:["Record when and how it happened, check mobility, ==pulp sensibility and a periapical==. Composite after debond. Document it in the record."],h:["Enamel fracture p93","Trauma p534–535"]},
+ {id:"B14",cat:"Complications",q:"Root resorption: risk and monitoring?",a:["Risk: extraction, large torque change, elastics. No significant resorption on the progress DPT; periapicals before any re-torquing."],h:["p94–95","p303–306"]},
+ {id:"B15",cat:"Retention",q:"How will you retain the rotated 21?",a:["Slight overcorrection, ==bonded upper 3–3==, consider ==CSF== (reduces rotational relapse, especially upper incisors)."],h:["CSF p975–976","p982–984"]},
+ {id:"B16",cat:"Retention",q:"Justify your retention plan.",a:["Indefinite retention (Little); bonded 3–3 upper and lower + VFRs full-time 6 months then nights; fixed retainer failure ==12–50%== for multistrand."],h:["p974–990","p984","WITE 13.8 p989"]},
+ {id:"B17",cat:"Reflection",hy:true,q:"What would you do differently?",a:["TADs instead of Class II elastics in a high-angle case.","==0.019 × 0.025 SS with power arms== for space closure.","U4/L5 to spare the lower incisors.","Consistent ceph tracings; correct bond-up date (11/04/2025); document the 21 chip."],h:["Ch 11 p725–730","p677–686","p600"]}
+];
+
+/* ---------- Fix before the exam ---------- */
+const FIXES = {
+ A:[
+  ["must","Appraisal still blames nasion placement for the SNA/SNB changes","Critical appraisal","Retraced films pass the sella check; SNB is stable and SNA rose. Attribute ANB 2.6 → 6.2° to A-point remodelling (see A-T4)."],
+  ["must","“Increased lower face height”, but retraced LAFH is 54.5% and MMPA 26°","Summary, extra-oral, diagnostic summary","Change to average vertical proportions."],
+  ["must","Estimated total 24–30 months, but he is at 30 months with 6–9 months to go","Treatment plan","Correct to ~36–39 months."],
+  ["must","36 bracket too gingival (marginal ridge 1 mm above 35), but the plan rebonds 12 and 45, not 36","Photo caption vs remaining treatment","Add 36 to the rebond list, or explain why not (see A19)."],
+  ["must","Superimposition caption “post-functional (T1) blue · end of treatment (T2) red”","Superimposition page","No functional; label pre-treatment and progress with dates."],
+  ["should","Interincisal angle 145.6° in the table and narrative, 146.5° in the appraisal","Critical appraisal","Use 145.6°."],
+  ["should","IOTN 2a for the overjet, but the 41/31 contact displacement isn’t graded","Intra-oral assessment","Measure it: 2–4 mm = 3d, > 4 mm = 4d."],
+  ["should","Narrative says “average FMPA (MMPA 26.0°)”","Narrative","Say MMPA, or measure FMPA."],
+  ["should","Wits norm −4.5 ± 3 mm","Ceph table","Handbook: males ≈ −1 mm. Verify your source."],
+  ["should","Status column shows T0 only (U1–MxP 91.9° still “within 1 SD”)","Ceph table","Add T1 status or a change column."],
+  ["should","0.018 round SS planned for arch coordination after torque correction","Remaining treatment","Use a rectangular wire to keep torque."],
+  ["prep","Brackets now “conventional twin”; earlier versions said self-ligating","Whole record","Know your system and why (see A18)."],
+  ["prep","Appraisal says a functional wasn’t indicated","Critical appraisal","Defend with the Class I base and proclined lowers (see A-T1)."],
+  ["tidy","Ceph interpretation paragraph contains only the norm reference","Pre-treatment ceph page","Add 3–4 lines of interpretation."]
+ ],
+ B:[
+  ["must","Bond-up still 11/10/2025 everywhere, contradicting “18.5 months to 10/10/2026” and age 13 y 2 m","Front page, Section 1, treatment plan","Use 11/04/2025 (13 y 2 m; ~18 months)."],
+  ["must","“ANB (4.5°) and MMPA unchanged: vertical control maintained”, but T1 ANB is 5.1° and SN–MxP rose 8 → 11°","Narrative, appraisal","With MMPA constant, the mandibular plane rotated ~3° clockwise relative to SN. Rephrase (see B-T2)."],
+  ["must","No step in the remaining plan corrects the left half-unit Class II canine","Remaining treatment","Add a left-side plan (see B11)."],
+  ["must","Plan steps back to 0.017 × 0.025 SS, though space closure used 0.019 × 0.025","Remaining treatment","Return to 0.019 × 0.025 SS."],
+  ["must","Superimposition caption “post-functional (T1) blue · end of treatment (T2) red”","Superimposition page","Delete; the figures already show dated black/red."],
+  ["must","Chipped 21 restored after debond, but never documented","Narrative","Record when, how, pulp tests and a periapical."],
+  ["should","Skeletal base: “Class II base with a mild Class II tendency” (summary) vs “Class I with a mild Class II tendency” (extra-oral)","Summary, extra-oral, diagnostic summary","Use “mild Class II skeletal base (mandibular retrusion), high angle” (see B-T4)."],
+  ["should","Wits +2.3 mm in the table but +2.2 mm in the interpretation","Ceph interpretation","Use 2.3 mm."],
+  ["should","Buccally tilted 17 and 27 noted, with no plan","Intra-oral assessment, remaining treatment","Add palatal crown torque or a TPA (see B19)."],
+  ["should","Upper crowding still “3 mm” in the diagnostic summary and problem list","Diagnostic summary, problem list","Change to 2.3 mm."],
+  ["should","“Increased FMPA” in the diagnostic summary, aetiology and narrative","Diagnostic summary, aetiology, narrative","Say MMPA (35.3°)."],
+  ["should","“Passive self-ligating” in summary and narrative, just “self-ligating” in the plan","Treatment plan","Make them match."],
+  ["should","Wits norm −4.5 ± 3 mm","Ceph table","Handbook: females 0 mm."],
+  ["should","Left Class II attributed to the anterior Bolton excess","Critical appraisal","A bilateral discrepancy can’t explain a unilateral problem."],
+  ["prep","“Fixed appliances chosen for better torque and root control”","Critical appraisal","Expect: “so why was torque lost?” (see B-T3)."],
+  ["prep","U4/L5 now recorded as the alternative","Treatment plan","Be ready to say why you chose four first premolars (see B-T1)."]
+ ],
+ both:[
+  ["should","Torque lost in both cases despite moving to 0.019 × 0.025 SS","Both narratives","Explain: ~9–12° play, en-masse sliding, Class II elastics; power arms and added root torque needed."],
+  ["should","Wits norm −4.5 ± 3 mm in both tables","Ceph tables","Use sex-specific norms from the handbook."],
+  ["should","Superimposition films at different magnifications","Superimposition pages","Calibrate to the ruler before interpreting linear change."]
+ ]
+};
+const RESOLVED = {
+ A:["Ceph retraced: SN–MxP 9.9° passes the sella check","SNA, SNB and LAFH values now plausible","Skeletal base “Class I” throughout","Space closure moved to 0.019 × 0.025 SS","IOTN corrected to 2a","Teeth-present wording fixed","Space analysis","Consent and risks documented"],
+ B:["Ceph retraced: SN–MxP 8° passes the sella check","LAFH ratio now plausible (56.3 → 55.2%)","U4/L5 alternative recorded","Space closure on 0.019 × 0.025 SS","Light Class II elastics specified","Lower IPR dropped","Centreline and lip-trap issues fixed","Space analysis, IOTN 4a, CVM CS5, consent"]
+};
+
+/* ===================== CEPHALOMETRICS ===================== */
+/* Schematic coordinates (profile facing right), viewBox 0 0 620 700 */
+const P = {
+ S:[210,205], N:[482,178], Po:[124,258], Or:[420,262], Ar:[200,322],
+ PNS:[268,352], ANS:[488,338], A:[467,380],
+ Is:[481,468], UIA:[440,370], Ii:[470,458], LIA:[430,540],
+ B:[452,520], Pog:[468,576], Gn:[457,598], Me:[436,609], Go:[250,556],
+ Ms:[350,442], Mi:[356,446],
+ Prn:[566,300], Cm:[541,333], Sn:[516,348], Ls:[521,420], Li:[516,492], PogS:[502,584]
+};
+const LM = {
+ S:{n:"Sella (S)",soft:0,d:"Centre of the sella turcica (pituitary fossa).",tip:"Constructed point; its vertical position rotates SN. A misplaced S changes SNA and SNB equally (ANB unchanged) and shows up as an abnormal SN–MxP.",pg:"p421, p424, p429"},
+ N:{n:"Nasion (N)",soft:0,d:"Most anterior point of the frontonasal suture in the midline.",tip:"Not part of the cranial base and moves with growth. More anterior or superior N lowers SNA and alters ANB.",pg:"p421, p428"},
+ Po:{n:"Porion (Po)",soft:0,d:"Uppermost, outermost point of the external auditory meatus.",tip:"Hard to locate; bilateral images often need averaging. Used for Frankfort horizontal.",pg:"p418, p421"},
+ Or:{n:"Orbitale (Or)",soft:0,d:"Lowest, most anterior point on the orbital margin.",tip:"Bilateral; average left and right. Used for Frankfort horizontal.",pg:"p418, p421"},
+ Ar:{n:"Articulare (Ar)",soft:0,d:"Where the posterior border of the ramus crosses the outer contour of the posterior cranial base.",tip:"Radiographic, not anatomical, point; used in Björk’s polygon.",pg:"p421, p434"},
+ PNS:{n:"Posterior nasal spine (PNS)",soft:0,d:"Tip of the posterior nasal spine, found where the base of the pterygomaxillary fissure meets the nasal floor.",tip:"Often obscured by developing molars; use the fissure to locate it.",pg:"p421"},
+ ANS:{n:"Anterior nasal spine (ANS)",soft:0,d:"Tip of the bony anterior nasal spine in the midline.",tip:"Remodels; thin tip is easily burnt out on the film.",pg:"p421, p472"},
+ A:{n:"Point A (subspinale)",soft:0,d:"Deepest point on the anterior maxillary concavity between ANS and the alveolar crest.",tip:"Remodels with incisor root movement: palatal crown tipping moves the apex labially and brings A forward (Case A, SNA +3.3°); palatal root torque moves it back.",pg:"p421, p461"},
+ B:{n:"Point B (supramentale)",soft:0,d:"Deepest point on the anterior mandibular concavity between the alveolar crest and the chin.",tip:"Remodels with lower incisor retraction (both of your cases).",pg:"p421, p461"},
+ Pog:{n:"Pogonion (Pog)",soft:0,d:"Most anterior point on the bony chin.",tip:"Used for the A–Pog line.",pg:"p421"},
+ Gn:{n:"Gnathion (Gn)",soft:0,d:"Most anterior-inferior point on the bony chin.",tip:"Used in Go–Gn mandibular plane and the y-axis.",pg:"p421, p427"},
+ Me:{n:"Menton (Me)",soft:0,d:"Lowest point of the mandibular symphysis in the midline.",tip:"Lower end of anterior face height; Eastman mandibular plane runs Go–Me.",pg:"p421, p427"},
+ Go:{n:"Gonion (Go)",soft:0,d:"Most posterior-inferior point on the angle of the mandible.",tip:"Often constructed by bisecting the angle between ramus and lower-border tangents; remodels with growth.",pg:"p421, p427"},
+ Is:{n:"Incision superius (Is)",soft:0,d:"Incisal tip of the most anterior upper central incisor.",tip:"Use the most prominent incisor.",pg:"p421"},
+ UIA:{n:"Upper incisor apex (UIA)",soft:0,d:"Root apex of the most anterior upper central incisor.",tip:"Hard to see; estimate from the crown–root proportion. Errors change U1–MxP directly.",pg:"p421"},
+ Ii:{n:"Incision inferius (Ii)",soft:0,d:"Incisal tip of the most anterior lower central incisor.",tip:"Used for L1–APog distance.",pg:"p421"},
+ LIA:{n:"Lower incisor apex (LIA)",soft:0,d:"Root apex of the most anterior lower central incisor.",tip:"Often obscured by the symphysis; a large source of L1–MP error.",pg:"p421"},
+ Ms:{n:"Molar superioris (Ms)",soft:0,d:"Mesial cusp tip of the upper first molar.",tip:"With Mi, defines the posterior end of the occlusal plane.",pg:"p421"},
+ Mi:{n:"Molar inferioris (Mi)",soft:0,d:"Mesial cusp tip of the lower first molar.",tip:"Bilateral molars rarely superimpose; average them.",pg:"p421"},
+ Prn:{n:"Pronasale (Prn)",soft:1,d:"Most prominent point of the nasal tip.",tip:"Front end of Ricketts’ E-line; the nose keeps growing, so E-line norms are age-related.",pg:"p421, p457"},
+ Cm:{n:"Columella point (Cm)",soft:1,d:"Point on the lower border of the nose used to draw the columella tangent.",tip:"Columella tangent + upper lip tangent form the nasolabial angle.",pg:"p377"},
+ Sn:{n:"Subnasale (Sn)",soft:1,d:"Junction of the columella and upper lip in the midline.",tip:"Vertex of the nasolabial angle.",pg:"p421"},
+ Ls:{n:"Labrale superius (Ls)",soft:1,d:"Most prominent point of the upper lip vermilion.",tip:"Upper lip should sit ~2 mm further behind the E-line than the lower lip.",pg:"p421, p457"},
+ Li:{n:"Labrale inferius (Li)",soft:1,d:"Most prominent point of the lower lip vermilion.",tip:"Lower lip to E-line: about −2.5 mm at 13 years, −5 mm in the early 20s.",pg:"p421, p457"},
+ PogS:{n:"Soft-tissue pogonion (Pog′)",soft:1,d:"Most prominent point of the soft-tissue chin.",tip:"Back end of the E-line.",pg:"p421, p457"}
+};
+const LINES = {
+ SN:["S","N",.25,.2], FH:["Po","Or",.1,.35], MxP:["PNS","ANS",.35,.25], MP:["Go","Me",.25,.15],
+ OP:[[318,447],[436,457],.6,.35], APog:["A","Pog",.5,.25], E:["Prn","PogS",.15,.15],
+ U1:["UIA","Is",.45,.25], L1:["LIA","Ii",.35,.3], NA:["N","A",0,.15], NB:["N","B",0,.1],
+ CmT:["Sn","Cm",0,.6], LsT:["Sn","Ls",0,.2]
+};
+const PLANES = {
+ SN:{n:"Sella–nasion line (SN)",d:"Line from S to N: the anterior cranial base reference for the jaws.",tip:"Both points are mid-sagittal and easy to find, but N moves with growth and S remodels. SN–MxP should be 8 ± 3°.",pg:"p424"},
+ FH:{n:"Frankfort horizontal (FH)",d:"Line from porion to orbitale.",tip:"Can be found clinically too, but both points are hard to locate, bilateral, and not mid-sagittal.",pg:"p418"},
+ MxP:{n:"Maxillary plane (ANS–PNS)",d:"Horizontal reference for the maxilla.",tip:"Used for U1 inclination, MMPA, SN–MxP and face heights.",pg:"p424–425"},
+ MP:{n:"Mandibular plane (Go–Me)",d:"Eastman construction: gonion to menton. Alternatives: tangent to the lower border through Me, or Go–Gn.",tip:"Say which construction you used; values differ between them.",pg:"p426–427, Fig 7.39"},
+ OP:{n:"Functional occlusal plane",d:"Line through the maximal intercuspation of the premolars and first molars.",tip:"Wits is measured on it; it rotates with levelling and elastics, so Wits changes with treatment.",pg:"p425, p431"},
+ APog:{n:"A–Pogonion line",d:"Line from point A to pogonion.",tip:"Ricketts: lower incisor tip ~1 mm (±2) ahead; no evidence this position improves stability or aesthetics.",pg:"p436–437"},
+ E:{n:"Ricketts’ E-line",d:"Line from pronasale to soft-tissue pogonion.",tip:"Age-related: the lips become relatively more retrusive as the nose and chin grow.",pg:"p457"},
+ U1:{n:"Upper incisor long axis",d:"Line through UIA and Is.",tip:"Apex is the error-prone end.",pg:"p436"},
+ L1:{n:"Lower incisor long axis",d:"Line through LIA and Ii.",tip:"Apex often hidden in the symphysis.",pg:"p436"}
+};
+/* value rows: [A T0, A T1, B T0, B T1] */
+const MEAS = [
+ {id:"SNA",g:"Skeletal AP",n:"SNA",lines:["SN","NA"],pts:["S","N","A"],arc:{v:"N",r1:"S",r2:"A"},
+  d:"Angle between SN and N–A: maxillary position relative to the anterior cranial base.",hb:"81 ± 3° (Eastman)",rec:"82 ± 3.5° (records)",vals:["78.7","!82","79","78.1"],u:"°",
+  m:"Low = retrusive maxilla; high = protrusive, but only if N and S are correctly placed.",
+  trap:"Case A rose 78.7 → 82° while SNB held: the incisor crowns tipped palatally, so the ==root apices moved labially and A point came forward==. Re-torquing will move it back.",pg:"p426–429, Fig 7.40"},
+ {id:"SNB",g:"Skeletal AP",n:"SNB",lines:["SN","NB"],pts:["S","N","B"],arc:{v:"N",r1:"S",r2:"B"},
+  d:"Angle between SN and N–B: mandibular position relative to the anterior cranial base.",hb:"78 ± 3° (Eastman)",rec:"79 ± 3° (records)",vals:["76.1","75.8","74.5","!73"],u:"°",
+  m:"Low = retrusive mandible.",trap:"Case A stable (76.1 → 75.8°) despite growth. Case B fell 1.5° while SN–MxP rose 3°: a small clockwise mandibular rotation.",pg:"p426–429"},
+ {id:"ANB",g:"Skeletal AP",n:"ANB",lines:["NA","NB"],pts:["N","A","B"],arc:{v:"N",r1:"A",r2:"B"},
+  d:"SNA minus SNB: the AP jaw relationship.",hb:"3 ± 2°; Class I 2–4°, Class II > 4°, Class III < 2° (Table 7.4)",rec:"3 ± 2° (records)",vals:["2.6","!6.2","4.5","5.1"],u:"°",
+  m:"Mills’ correction: ±0.5° per degree SNA differs from 81°, only valid if SN–MxP is 8 ± 3°.",
+  trap:"Retraced films pass the sella check, so Mills applies: Case A T0 ≈ 3.8° (Class I), Case B T0 ≈ 5.5° (mild Class II). Case A’s rise to 6.2° is A-point remodelling; Case B’s 4.5 → 5.1° fits clockwise rotation.",pg:"p428–429, Table 7.4"},
+ {id:"Wits",g:"Skeletal AP",n:"Wits appraisal",lines:["OP"],pts:["A","B"],aux:"wits",
+  d:"Perpendiculars from A and B to the functional occlusal plane (AO, BO); distance AO–BO.",hb:"Males: BO 1 mm ahead of AO (≈ −1 mm). Females: AO and BO coincide (0 mm).",rec:"−4.5 ± 3 mm (records: verify)",vals:["+1.6","+2.7","+2.3","!−0.5"],u:" mm",
+  m:"Positive (AO ahead) = Class II tendency; negative = Class III. Avoids the cranial base.",
+  trap:"Depends on the occlusal plane, which changes with levelling and elastics: Case B’s +2.3 → −0.5 mm is dental, not skeletal.",pg:"p429–431, Fig 7.42"},
+ {id:"SNMx",g:"Vertical",n:"SN–maxillary plane",lines:["SN","MxP"],pts:["S","N","ANS","PNS"],
+  d:"Angle between SN and ANS–PNS.",hb:"8 ± 3°",rec:"8 ± 3° (records)",vals:["9.9","8.2","8","!11"],u:"°",
+  m:"The sella validity check: outside 8 ± 3°, S is probably misplaced and Mills’ correction shouldn’t be used.",
+  trap:"Both retraced T0 values pass (9.9°, 8°). Case B’s rise to 11° matters: with MMPA unchanged, the mandibular plane also rotated ~3° clockwise.",pg:"p429"},
+ {id:"MMPA",g:"Vertical",n:"MMPA",lines:["MxP","MP"],pts:["ANS","PNS","Go","Me"],
+  d:"Angle between the maxillary plane and the mandibular plane.",hb:"27 ± 5°",rec:"26 ± 5° (records)",vals:["26","27.4","35.3","35.3"],u:"°",
+  m:"High = hyperdivergent (Case B); avoid molar extrusion.",trap:"MMPA can stay constant while both planes rotate together. Case B: SN–MxP +3° with MMPA unchanged → SN–MP ≈ 43.3 → 46.3°, so “vertical control maintained” is overstated.",pg:"p432, Fig 7.45"},
+ {id:"FMPA",g:"Vertical",n:"FMPA",lines:["FH","MP"],pts:["Po","Or","Go","Me"],
+  d:"Angle between Frankfort horizontal and the mandibular plane.",hb:"27 ± 5°",rec:"not measured",vals:["—","—","—","—"],u:"",
+  m:"Ignores a canted maxillary plane; use with MMPA.",trap:"Both records say “FMPA” but report MMPA. Use the right term.",pg:"p432, p443"},
+ {id:"LAFH",g:"Vertical",n:"LAFH : TAFH ratio",lines:["MxP"],pts:["N","Me","ANS"],aux:"fh",
+  d:"Lower anterior face height (MxP → Me) as a percentage of total (N → Me), both perpendicular to the maxillary plane.",hb:"≈ 55%. UAFH ~54 mm, LAFH ~65 mm (adult male)",rec:"55 ± 2% (records)",vals:["54.5","55.9","56.3","55.2"],u:"%",
+  m:"> 57% suggests a long lower face.",trap:"Retraced values are average in both (54.5%, 56.3%). Case A’s record still calls its lower face height “increased”.",pg:"p433, Fig 7.46"},
+ {id:"U1",g:"Dental",n:"U1 – maxillary plane",lines:["U1","MxP"],pts:["UIA","Is","ANS","PNS"],arc:{x:["U1","MxP"],r1:"PNS",r2:"Is"},
+  d:"Angle between the upper incisor long axis and ANS–PNS (posterior angle).",hb:"109 ± 6° (Eastman)",rec:"118 ± 6° (Chinese, records)",vals:["122.8","!91.9","121.9","!103"],u:"°",
+  m:"Both cases over-retroclined during en-masse sliding on 0.017 × 0.025 SS.",trap:"Software flags compare with Caucasian norms; state which norm you use.",pg:"p436, Fig 7.48"},
+ {id:"L1",g:"Dental",n:"L1 – mandibular plane",lines:["L1","MP"],pts:["LIA","Ii","Go","Me"],arc:{x:["L1","MP"],r1:"Go",r2:"Ii"},
+  d:"Angle between the lower incisor long axis and Go–Me.",hb:"93 ± 6°, or 120 − MMPA",rec:"97 ± 7° (Chinese, records)",vals:["102.3","95.1","92.9","!81.9"],u:"°",
+  m:"Compensated norms: Case A 120 − 26 = ==94°== (T1 95.1° is ideal); Case B 120 − 35.3 = ==84.7°== (T1 81.9° only ~3° below).",trap:"A steep mandibular plane naturally retroclines the incisors; quote the compensated norm.",pg:"p436"},
+ {id:"II",g:"Dental",n:"Interincisal angle",lines:["U1","L1"],pts:["UIA","Is","LIA","Ii"],arc:{x:["U1","L1"],r1:"UIA",r2:"LIA"},
+  d:"Angle between the upper and lower incisor long axes.",hb:"135 ± 10° (Eastman)",rec:"115 ± 8° (Chinese, records)",vals:["108.9","!145.6","109.9","!139.8"],u:"°",
+  m:"Large angles favour a deep bite and overbite relapse.",trap:"Case A’s 145.6° matches its deepened overbite (the appraisal says 146.5°: correct it).",pg:"p439, Fig 7.51"},
+ {id:"L1AP",g:"Dental",n:"L1 to A–Pog",lines:["APog"],pts:["A","Pog","Ii"],aux:"apog",
+  d:"Perpendicular distance from the lower incisor tip to the A–Pog line.",hb:"+1 ± 2 mm (Ricketts)",rec:"5.5 ± 2.5 mm (records)",vals:["7.2","!0.8","6.2","1.7"],u:" mm",
+  m:"Shows lower incisor AP position relative to the jaws.",trap:"No evidence that placing incisors on A–Pog improves stability (Houston & Edler 1990).",pg:"p436–437, Fig 7.49"},
+ {id:"LLE",g:"Soft tissue",n:"Lower lip to E-line",lines:["E"],pts:["Prn","PogS","Li"],aux:"elip",
+  d:"Distance from labrale inferius to Ricketts’ E-line (negative = behind).",hb:"≈ −2.5 mm at 13 y; ≈ −5 mm early 20s; upper lip ~2 mm further back",rec:"—",vals:["+5.0","+3.1","+4.8","+1.2"],u:" mm",
+  m:"Both cases improved but remain slightly protrusive for age (Chinese faces are typically fuller).",trap:"Changes with nose and chin growth, not just treatment.",pg:"p457"},
+ {id:"NLA",g:"Soft tissue",n:"Nasolabial angle",lines:["CmT","LsT"],pts:["Cm","Sn","Ls"],arc:{v:"Sn",r1:"Cm",r2:"Ls"},
+  d:"Angle between the columella tangent and the upper lip tangent at subnasale.",hb:"Caucasian 100 ± 10° (males), 105 ± 10° (females)",rec:"—",vals:["~100","~100","!66.9","81.4"],u:"°",
+  m:"Acute = procumbent upper lip; incisor retraction opens it.",trap:"Case B is still acute at 81.4°; lip response to retraction is variable.",pg:"p377"}
+];
+const RULES = [
+ {t:"ANB classification",b:["Class I 2–4°, Class II > 4°, Class III < 2° (Table 7.4).","Always add one non-cranial-base measure (Wits, Ballard)."],pg:"p428"},
+ {t:"Mills’ Eastman correction",b:["SNA > 81°: subtract 0.5° from ANB per degree; SNA < 81°: add 0.5° per degree.","==Only valid if SN–MxP is 8 ± 3°.== Your retraced films pass (A 9.9°, B 8°): corrected ANB A ≈ 3.8°, B ≈ 5.5°."],pg:"p428–429"},
+ {t:"Nasion vs sella errors",b:["==Nasion== more anterior or superior → lower SNA → ANB changes.","==Sella== at a different height rotates SN → SNA and SNB change equally, ANB unchanged (what your earlier tracings showed)."],pg:"p428–429"},
+ {t:"Hidden rotation check",b:["SN–MP ≈ SN–MxP + MMPA. If SN–MxP changes while MMPA stays constant, the mandible has rotated with the maxilla.","Case B: 8 + 35.3 = 43.3° → 11 + 35.3 = 46.3° → ==~3° clockwise==. Case A: 35.9 → 35.6°, stable."],pg:"p424–425, p432"},
+ {t:"Wits norms",b:["Males: BO 1 mm ahead of AO. Females: AO and BO coincide.","Class II: AO ahead of BO. Sensitive to occlusal-plane changes."],pg:"p431"},
+ {t:"Ballard conversion",b:["Rotate U1 to 109° and L1 to 93° (or 120 − MMPA) around a fulcrum one-third of the root from the apex.","The residual overjet reflects the skeletal pattern. Its premises are debated."],pg:"p431, p435–436"},
+ {t:"Face heights",b:["TAFH = N → Me, LAFH = MxP → Me (both perpendicular to MxP); LAFH ≈ 55% of TAFH.","TPFH (S → Go) ≈ 65% of TAFH; influenced by the height of sella."],pg:"p433"},
+ {t:"Lower incisor compensation",b:["Expected L1–MP ≈ ==120 − MMPA==.","High angle → incisors naturally more retroclined."],pg:"p436"},
+ {t:"Soft-tissue norms",b:["E-line: lower lip ≈ −2.5 mm at 13 y, −5 mm early 20s.","NLA: 100 ± 10° males, 105 ± 10° females (Caucasian)."],pg:"p377, p457"},
+ {t:"Sources of error",b:["Each landmark has its own envelope of error (Baumrind & Frantz). A and B remodel with incisor movement.","Reduce error: good positioning, known magnification, repeat measurements, calibrated operator."],pg:"p459–462, Fig 7.60"},
+ {t:"Superimposition (Björk)",b:["Cranial base: anterior wall of sella (Walker point), cribriform plate, ethmoid crests, orbital roof, inner frontal contour.","Maxilla: anterior contour of the zygomatic process. Mandible: chin anterior contour, inner cortex of the symphysis, mandibular canal, molar germs before root formation.","SN registered at S exaggerates posterior vertical change."],pg:"p464–476, Fig 7.62"}
+];
+const APPLY = {
+ A:["==AP==: ANB 2.6°; Mills valid (SN–MxP 9.9°) → ≈ 3.8° → Class I. Wits +1.6 mm (male norm ≈ −1) → slight Class II tendency.","==Vertical==: MMPA 26°, LAFH 54.5% → average (record still says “increased”).","==Dental==: U1 122.8°, L1 102.3° (compensated norm 94°), interincisal 108.9°, L1–APog 7.2 mm → bimaxillary dentoalveolar protrusion.","==Soft tissue==: lower lip +5.0 mm (norm ≈ −2.5 mm), NLA ~100° average.","==Change==: U1 −30.9°, interincisal +36.7°, L1–APog −6.4 mm. SNA +3.3° with SNB stable → A-point remodelling; SN–MP ≈ 35.9 → 35.6°, stable."],
+ B:["==AP==: ANB 4.5° (> 4° = Class II); Mills valid (SN–MxP 8°) → ≈ 5.5°. Wits +2.3 mm (female norm 0); SNB 74.5° → mild Class II, mandibular retrusion.","==Vertical==: MMPA 35.3° high; LAFH 56.3%.","==Dental==: U1 121.9°; L1 92.9° vs compensated 84.7° → relatively proclined.","==Soft tissue==: lower lip +4.8 mm, NLA 66.9° acute, lips incompetent → bimaxillary protrusion.","==Change==: U1 −18.9°, L1 −11°, interincisal +29.9°. SN–MxP +3° with MMPA unchanged → mandible ~3° clockwise; SNB −1.5°, ANB +0.6°, Wits −2.8 mm."]
+};
+const CEPHQ = [
+ {id:"C1",cat:"Landmarks",hy:true,q:"Define points A and B. Why are they unreliable during treatment?",a:["A: deepest point of the anterior maxillary concavity between ANS and the alveolar crest. B: deepest point of the anterior mandibular concavity between the alveolar crest and the chin.","Both ==remodel with incisor movement==: palatal root torque moves A back; lower incisor retraction moves B back."],h:["p421","p461"]},
+ {id:"C2",cat:"Planes",q:"Why use SN rather than Frankfort horizontal?",a:["SN: both points mid-sagittal, easy to identify, less affected by head rotation.","FH: also clinical, but Po and Or are hard to see, bilateral and not mid-sagittal.","SN weaknesses: ==N moves with growth; S remodels==."],h:["p418","p424"]},
+ {id:"C3",cat:"Analysis",hy:true,q:"Apply Mills’ correction to your cases.",a:["Case A: SNA 78.7° → add 1.15° → ANB ≈ 3.8° (Class I). Case B: SNA 79° → add 1° → ANB ≈ 5.5° (Class II).","Both retraced T0 films have SN–MxP within 8 ± 3° (9.9°, 8°), so the correction is ==valid==; your earlier tracings (1.7°) were not."],h:["p428–429"]},
+ {id:"C4",cat:"Analysis",hy:true,q:"Describe the Wits appraisal and its limitations.",a:["Perpendiculars from A and B to the functional occlusal plane; ==males BO 1 mm ahead of AO, females coincide==.","Avoids the cranial base, but the occlusal plane is hard to construct and ==changes with treatment==."],h:["p429–431","Fig 7.42"]},
+ {id:"C5",cat:"Analysis",q:"What is Ballard’s conversion?",a:["Rotate the incisors to normal inclinations (U1 109°, L1 93° or 120 − MMPA) around a fulcrum ~⅓ root length from the apex; the residual overjet shows the skeletal pattern.","Assumes constant incisor–jaw relations and a fixed fulcrum, so its validity is debated."],h:["p431","p435–436","Fig 7.44"]},
+ {id:"C6",cat:"Vertical",q:"MMPA vs FMPA: which and why?",a:["MMPA (MxP–MP) and FMPA (FH–MP), both ==27 ± 5°==.","FMPA ignores a canted maxillary plane; use them together. Your records say FMPA but measured MMPA."],h:["p432","Fig 7.45"]},
+ {id:"C7",cat:"Dental",hy:true,q:"Interpret Case B’s L1–MP of 81.9° at T1.",a:["Compensated norm = 120 − MMPA = ==84.7°==, so the lower incisors are only ~3° retroclined for her high angle, much less alarming than 81.9° vs 93° suggests."],h:["p436"]},
+ {id:"C8",cat:"Error",hy:true,q:"How do you minimise cephalometric error?",a:["Correct head positioning; high-quality film; known magnification (calibrate to the ruler); optimum viewing; hand-trace then digitise; ==repeat measurements== and calibrate the operator.","Know each landmark’s envelope of error (Baumrind & Frantz)."],h:["p459–462","Fig 7.60"]},
+ {id:"C9",cat:"Superimposition",hy:true,q:"Which structures do you superimpose on, and why?",a:["Cranial base (Björk): anterior wall of sella, cribriform plate, ethmoid crests, orbital roof, inner frontal contour.","Maxilla: anterior zygomatic process contour. Mandible: anterior chin, inner symphyseal cortex, mandibular canal, molar germs.","These are ==stable during growth==; SN at S exaggerates posterior vertical change."],h:["p464–476","Fig 7.62","Fig 7.65"]},
+ {id:"C10",cat:"Norms",q:"Which norms should you use for Chinese patients?",a:["Ethnic norms (e.g. Cooke & Wei 1988 for southern Chinese) are more appropriate: incisors and lips are typically more protrusive.","==State one norm set and use it consistently==; software flags often use Caucasian Eastman values."],h:["Table 7.3 p417"]}
+];
+/* ===================== TOPIC BANK ===================== */
+const TOPICS = [
+ {id:"wires",title:"Archwire materials and composition",h:["Ch 10 archwires p647–657","Properties p649–650","Materials p651–657","Table 10.3 p654","Nickel allergy p97, p363"],blocks:[
+  {type:"table",head:["Alloy","Composition","Stiffness","Springback","Formability / joining","Friction","Use"],rows:[
+   ["Stainless steel","Fe, 17–19% Cr, 8–10% Ni, < 0.2% C","==Highest== (~200 GPa)","Low","Excellent; solder, weld","==Lowest==","Working wires, space closure, finishing"],
+   ["Cobalt–chromium (Elgiloy)","40% Co, 20% Cr, 15% Ni, 15% Fe, 7% Mo","~SS","Low (rises with heat treatment)","Excellent (blue temper); solder, weld","Low","Loops, springs"],
+   ["Beta-titanium (TMA)","79% Ti, 11% Mo, 6% Zr, 4% Sn","~0.4 × SS","High","Good; ==true weld==","==Highest== (galling)","Finishing bends, torque, intrusion arches"],
+   ["Martensitic-stabilised NiTi","~55% Ni, 45% Ti","Low","High","Poor; no joining","Moderate","Older alignment wire"],
+   ["Austenitic-active (superelastic) NiTi","NiTi","Low","Very high","Poor; no joining","Moderate","Initial alignment"],
+   ["Thermally active (Cu-NiTi)","NiTi + Cu, Cr","Temperature-dependent","Very high","Poor","Moderate","Very light alignment; Af 27/35/40 °C"],
+   ["Multistrand / coaxial SS","Twisted SS strands","Low effective","Moderate","Good","Moderate","Cheap alignment, bonded retainers"]
+  ]},
+  {type:"q",id:"T1",cat:"Wires",q:"What do the NiTi phase terms mean?",a:["==Austenite== = high-temperature, stiffer phase; ==martensite== = low-temperature, flexible phase.","==Af== = temperature at which transformation to austenite is complete: below Af the wire is soft to engage; in the mouth it turns austenitic and delivers force.","Stress can also induce martensite → ==superelasticity==."],h:["p654–655"]},
+  {type:"q",id:"T2",cat:"Wires",q:"Why can’t you bend NiTi?",a:["Poor formability: it springs back or fractures. Ends are cinched only after ==heat annealing==."],h:["p654"]}
+ ]},
+ {id:"ld",title:"The load–deflection curve",h:["Ch 10 definitions p652–653","Hysteresis p654–655, Fig 10.28","Fig 14.20 p1027–1028","Friction by alloy p334"],blocks:[
+  {type:"q",id:"T3",cat:"Wires",hy:true,q:"Draw and label a load–deflection curve for stainless steel.",a:["==Slope = stiffness== (Young’s modulus); proportional limit; ==yield strength== (0.1% permanent set); ultimate tensile strength; failure.","==Range/springback ≈ yield strength ÷ modulus==; resilience = area under the elastic part; formability = plastic range.","Strength = stiffness × range."],h:["p652–653"]},
+  {type:"q",id:"T4",cat:"Wires",hy:true,q:"Compare SS, TMA and superelastic NiTi.",a:["SS: steep line, high force per mm, small range → rigidity for space closure and finishing.","TMA: ~40% of SS slope, ~2× springback.","Superelastic NiTi: steep start, then a ==flat plateau (stress-induced martensite)==; unloading follows a ==lower plateau (hysteresis)== → light, near-constant force. Needs ~2 mm deflection to reach the plateau.","Thermal NiTi: colder = lighter force."],h:["p652–655","Fig 10.28","Fig 14.20"]},
+  {type:"formula",text:"Stiffness ∝ E·I / L³     I(round) = πd⁴ / 64     I(rectangular) = b·h³ / 12"},
+  {type:"q",id:"T5",cat:"Wires",q:"How do wire size and length change behaviour?",a:["==Double the diameter → 16× stiffer==, 8× stronger, half the range.","==Double the span → ⅛ stiffness==, 4× range.","Rectangular wire is stiffer along its larger dimension (h³)."],h:["p651–652"]},
+  {type:"q",id:"T6",cat:"Wires",q:"Properties of an ideal archwire?",a:["High springback, low stiffness, high stored energy, strength, formability, joinability, ==low friction==, biocompatibility, environmental stability, aesthetics, low cost. No alloy has all → ==sequencing==."],h:["p649–653"]}
+ ]},
+ {id:"seq",title:"Wire sequencing: when to use which",h:["WITE 10.4 p655–657","Levelling p687–692","WITE 10.5 p693","Overbite p693–696","Space closure p696–700","Finishing p699–701"],blocks:[
+  {type:"table",head:["Stage","Aim","Wires (0.022 slot)","Why"],rows:[
+   ["Alignment","Unravel crowding, derotate","0.012/0.014 → 0.016 → 0.018 NiTi","Light continuous force, large deflection"],
+   ["Levelling, early torque","Level Spee, begin torque","0.016 × 0.022 → 0.017 × 0.025 / 0.019 × 0.025 NiTi","Gradual slot engagement"],
+   ["Working (space closure)","Sliding, tip and torque control","==0.019 × 0.025 SS== (MBT) + hooks or power arms","Stiff, low friction, ==~9° play=="],
+   ["Finishing","Detail bends, torque","0.019 × 0.025 TMA; 0.021 × 0.025","Bendable with springback"],
+   ["Settling","Intercuspation","Sectioned / light round wire + vertical elastics","Teeth settle"]
+  ]},
+  {type:"note",text:"Case link: both cases closed space on 0.017 × 0.025 SS, and both lost incisor torque. Be ready to explain why MBT recommends 0.019 × 0.025."}
+ ]},
+ {id:"brackets",title:"Brackets: types and properties",h:["Ch 10 evolution p614–628","Brackets p630–647","Ideal bracket p638","Ceramic p638–640","Self-ligating p643–647","WITE 10.2 p639","WITE 10.3 p646","Prescriptions p677–686","Box 2.2 p58"],blocks:[
+  {type:"q",id:"T7",cat:"Brackets",q:"What is a pre-adjusted edgewise appliance?",a:["Andrews built ==tip, torque and in-out== into the bracket from his ==six keys==: molar relationship, crown angulation, crown inclination, no rotations, tight contacts, flat curve of Spee.","Roth adds overcorrection; MBT adds upper incisor torque, reduces canine tip and lower incisor torque."],h:["p617–624","Box 2.2 p58"]},
+  {type:"q",id:"T8",cat:"Brackets",hy:true,q:"Give the MBT values you used.",a:["Upper central ==+17° torque==/4° tip; lateral +10°/8°; canine −7°/8°.","Lower incisors ==−6°==/0°; lower canine −6°/3°; upper molars −14°; lower first molar −20°.","Why: resist upper retroclination (retraction, Class II elastics) and lower proclination."],h:["p679–682","Fig 10.48 p681"]},
+  {type:"q",id:"T9",cat:"Brackets",q:"Compare 0.018 and 0.022-inch slots.",a:["0.022: stiffer working wires, better sliding. 0.018: full-size wires give torque control with smaller wires.","==No meaningful clinical difference== in alignment efficiency or outcome (WITE 10.2)."],h:["WITE 10.2 p639"]},
+  {type:"table",head:["Wire in 0.022 slot","Approx. torque play"],rows:[["0.017 × 0.025","~18–20°"],["0.018 × 0.025","~15°"],["0.019 × 0.025","==~9° (handbook p686)== to 12°"],["0.021 × 0.025","~2–4°"]]},
+  {type:"q",id:"T10",cat:"Brackets",hy:true,q:"Claimed advantages of self-ligating brackets, and the evidence?",a:["Passive (Damon, SmartClip) vs active (In-Ovation, SPEED) clips.","RCTs show ==no difference in rate of tooth movement, treatment time or visits== (Scott 2008; Fleming 2010; DiBiase 2011). Expansion = buccal tipping.","Downsides: cost, clip failure, bulk."],h:["p643–647","WITE 10.3 p646"]},
+  {type:"q",id:"T11",cat:"Brackets",q:"Ceramic brackets?",a:["Mono- vs polycrystalline. ==Brittle==, wear opposing enamel, risk enamel damage at debond, ==higher friction== (metal-lined slots help)."],h:["p638–640"]}
+ ]},
+ {id:"friction",title:"Friction and space closure mechanics",h:["Ch 6 force systems p330–332","Friction p333–335","Space closure p696–700","WITE 10.6 p699","Fig 10.60 p701","Closing loops p907, Fig 13.27","WITE 13.5 p914–915"],blocks:[
+  {type:"q",id:"T12",cat:"Mechanics",q:"What resists sliding?",a:["==Classical friction + binding + notching== (Kusy & Whitley).","Binding when the wire–slot angle exceeds the ==critical contact angle==; notching = wire deformation at the bracket edge."],h:["p333–335"]},
+  {type:"q",id:"T13",cat:"Mechanics",hy:true,q:"What force and rate for space closure?",a:["~150–200 g per side; ~1 mm per month.","==NiTi coils close faster than elastomeric chain (0.24 mm/month) and active ligatures (0.53 mm/month)==.","Too much force → ==rollercoaster effect== (deepened Spee, lateral open bites; compare Case B’s open bite at 35)."],h:["p698–701","WITE 10.6 p699","Fig 10.60"]},
+  {type:"table",head:["M/F ratio","Movement"],rows:[["0–5:1","Uncontrolled tipping"],["~7:1","Controlled tipping"],["==~10:1==","==Bodily movement=="],["> 12:1","Root movement (torque)"]]},
+  {type:"note",text:"Centre of resistance of a single-rooted tooth ≈ 40% of root length from the alveolar crest. A bracket force is labial and occlusal to it, so a counter-moment (full-size wire torque or a power arm) is needed for bodily retraction. Handbook p307–313."}
+ ]},
+ {id:"anchorage",title:"Anchorage, TPA and TADs",h:["Ch 6 anchorage p336–351","Headgear p344–349","Anchorage loss p350–351","Lacebacks p692–694","Palatal arches p661–663","Ch 11 p706–732","WITE 13.2 p874"],blocks:[
+  {type:"q",id:"T14",cat:"Anchorage",q:"Classify anchorage and assess demand.",a:["Intra-oral / extra-oral / skeletal; intra- vs inter-arch; ==minimum, moderate, maximum==.","Assess ==per arch== with a space analysis (Royal London): crowding, Spee, incisor AP change, inclination, arch width, tooth size → compare with space available. Case A shows why: low upper, high lower demand."],h:["p336–338","Box 8.6 p507"]},
+  {type:"table",head:["Method","Mechanism","Evidence / notes"],rows:[
+   ["Bigger anchor unit","Include second molars","Simple, always useful"],
+   ["Two-step retraction","Canines first","Not clearly better than en masse (WITE 13.5)"],
+   ["Lacebacks","Molar to canine ligature","==Little effect; may cost anchorage== (p693)"],
+   ["TPA","0.9 mm SS palatal bar","Rotation, torque, transverse; ==weak anchorage evidence=="],
+   ["Nance button","Acrylic on rugae","Moderate anchorage; tissue irritation"],
+   ["Headgear","Extra-oral force","Compliance; ==safety release needed== (p348)"],
+   ["Class II elastics","Lower arch as anchor","Compliance; ==vertical side effects==; spends lower anchorage"],
+   ["TADs","Skeletal","==Superior to conventional anchorage== (WITE 13.2)"]
+  ]},
+  {type:"q",id:"T15",cat:"TADs",hy:true,q:"Describe TADs: specification, sites, failure, complications.",a:["Titanium alloy miniscrews ~1.2–2.0 mm diameter, 6–10 mm long.","Sites: ==maxillary buccal 5–6, infrazygomatic crest, anterior palate==, mandibular buccal shelf, mandibular inter-radicular.","Uses: maximum retraction, ==molar intrusion (high angle)==, incisor intrusion, distalisation, protraction. Direct vs indirect anchorage.","Failure is ==site-dependent== (~12% mandibular inter-radicular, higher posteriorly); ==root contact== is a major cause; insertion torque ==5–10 Ncm==."],h:["Design p707–709","Risks p709–713","Failure p713–719","Sites p721–722","Applications p725–732"]}
+ ]},
+ {id:"elastics",title:"Inter-maxillary elastics",h:["Ch 6 elastics p342–344, Fig 6.40","Latex p362","Ch 9 caution p600","Ch 13 p905–909"],blocks:[
+  {type:"q",id:"T16",cat:"Elastics",hy:true,q:"Describe Class II elastics and their effects.",a:["Upper canine hook → lower first or second molar; 3/16 inch, 3.5–4.5 oz; ~20 h/day, ==changed at least daily==.","Effects: retract and retrocline uppers, procline lowers, mesialise lower molars; ==extrude lower molars and upper incisors== → clockwise rotation; buccal hooks roll lower molars lingually.","Avoid on light wires and in ==high-angle cases with reduced overbite==."],h:["p342–344","p600"]}
+ ]},
+ {id:"extraction",title:"Extraction patterns: pros and cons",h:["Ch 8 p506–516","Table 8.5 p516","Ch 6 p338","Ch 9 p600","WITE 2.2 p101","WITE 2.3 p104"],blocks:[
+  {type:"table",head:["Pattern","Indication","Pros","Cons"],rows:[
+   ["Four first premolars","Moderate–severe crowding, bimaxillary protrusion (both cases)","Space near incisors, max retraction","==Over-retraction== if anchorage isn’t planned per arch"],
+   ["Four second premolars","Mild crowding, minimal protrusion","Less retraction, profile kept","Longer protraction"],
+   ["Upper 4s + lower 5s","Class II camouflage","==Upper retraction + lower molar protraction==","Complex anchorage plan"],
+   ["Upper first premolars only","Class II div 1, good lower arch","Fewer teeth; Class II molar, Class I canine","Non-ideal (functional) molar relation"],
+   ["Upper 5s + lower 4s","Class III camouflage","Favours lower retraction","Same, reversed"],
+   ["Lower incisor","Severe lower anterior crowding","Quick","Bolton, black triangle"]
+  ]},
+  {type:"note",text:"Handbook Table 8.5: mild crowding 1–4 mm → non-extraction or second premolars; moderate 5–8 mm → first or second premolars; severe ≥ 9 mm → first premolars. Lip changes after four-premolar extraction are small and usually favourable (WITE 2.2)."}
+ ]},
+ {id:"class2",title:"Class II division 1 management",h:["Ch 8 p483–487","Box 8.3 p491","Ch 9 p539–611","Ch 13 p902–909","Ch 15 p1086–1098"],blocks:[
+  {type:"q",id:"T17",cat:"Class II",hy:true,q:"Options for a Class II div 1 in an adolescent?",a:["==Growth modification== (Twin Block, Herbst, Forsus; headgear) for skeletal Class II during growth; ==camouflage== (extractions, TAD distalisation); ==surgery== after growth.","Both of your cases are dentoalveolar Class II on a Class I or near-Class I base, so camouflage fits.","Functional appliances work better in average or reduced vertical proportions (p906)."],h:["p486","p583–590","p906"]}
+ ]},
+ {id:"complications",title:"Complications of fixed appliance treatment",h:["Ch 2 risks p92–104","Ch 6 p303–306","Ch 11 p709–719"],blocks:[
+  {type:"table",head:["Complication","Risk factors","Prevention / management","Page"],rows:[
+   ["==Root resorption==","Duration, torque, intrusion, extraction, heavy force","Light force; PA 6–9 months; pause if > 2 mm","p94, p303–306"],
+   ["==Demineralisation==","Poor hygiene, sugar","0.05% NaF daily; high-fluoride paste","p92–94"],
+   ["Enamel fracture","Ceramic debond, occlusal trauma","Technique; document chips (Case B 21)","p93"],
+   ["Gingivitis","Plaque (both cases)","OHI","p95"],
+   ["Alveolar bone loss, recession","Thin biotype, movement outside alveolus","Avoid excess proclination","p96, p916"],
+   ["Allergy","Nickel, latex","History; alternatives","p97, p362–363"],
+   ["Headgear injury","Facebow disengagement","Two safety mechanisms","p98, p348"],
+   ["Relapse","Rotations, growth","Retention, CSF","p100, p974–990"],
+   ["TMD","No causal link","Monitor","p101–104"],
+   ["Prolonged treatment","Planning, anchorage loss (Case A 36–39 months)","Clear plan","p701"]
+  ]}
+ ]},
+ {id:"retention",title:"Retention and stability",h:["Ch 13 p974–990","CSF p976","Failure p984","WITE 13.8 p989"],blocks:[
+  {type:"q",id:"T18",cat:"Retention",hy:true,q:"What does the evidence say about retention?",a:["==Little==: post-retention relapse is near-universal and unpredictable → ==indefinite retention==.","VFRs hold lower alignment better than Hawley; night wear is as effective after the initial period.","Fixed retainer failure ==12–50% (multistrand), 9–38% (round SS to canines)==. CSF reduces rotational relapse."],h:["p975–990"]}
+ ]},
+ {id:"outcome",title:"Outcome assessment",h:["Ch 2 PAR p107–110","ICON p111"],blocks:[
+  {type:"q",id:"T19",cat:"Outcome",q:"How will you measure the outcome?",a:["==PAR==: ≥ 22-point reduction = “greatly improved”; ≥ 30% = improved; < 30% = worse or no different.","ICON, ceph superimposition, patient satisfaction, pre/post IOTN AC."],h:["p107–111"]}
+ ]}
+];
+
+/* ===================== QUICK REFERENCE ===================== */
+const QREF = {head:["Measure","Norm (records)","A T0","A T1","B T0","B T1"],rows:[
+ ["SNA (°)","82 ± 3.5","78.7","!82","79","78.1"],
+ ["SNB (°)","79 ± 3","76.1","75.8","74.5","73"],
+ ["ANB (°)","3 ± 2","2.6 (Mills ≈ 3.8)","!6.2","4.5 (Mills ≈ 5.5)","5.1"],
+ ["SN–MxP (°)","8 ± 3","9.9","8.2","8","!11"],
+ ["SN–MP ≈ (°)","SN–MxP + MMPA","35.9","35.6","43.3","!46.3"],
+ ["Wits (mm)","verify","+1.6","+2.7","+2.3","−0.5"],
+ ["MMPA (°)","26 ± 5","26","27.4","35.3","35.3"],
+ ["LAFH ratio (%)","55 ± 2","54.5","55.9","56.3","55.2"],
+ ["U1–MxP (°)","118 ± 6","122.8","!91.9","121.9","!103"],
+ ["L1–MP (°)","97 ± 7","102.3","95.1","92.9","!81.9"],
+ ["Interincisal (°)","115 ± 8","108.9","!145.6","109.9","!139.8"],
+ ["L1–APog (mm)","5.5 ± 2.5","7.2","!0.8","6.2","1.7"],
+ ["Lower lip–E (mm)","≈ −2.5 at 13 y","+5.0","+3.1","+4.8","+1.2"],
+ ["NLA (°)","100–105 ± 10","~100","~100","66.9","81.4"],
+ ["Overjet (mm)","2–4","5","~2","7.2","normal"],
+ ["Crowding U / L (mm)","—","2.2 / 6.2","resolved","2.3 / 4.9","resolved"],
+ ["IOTN DHC","—","2a / 3d?","—","4a","—"],
+ ["Brackets","—","Conventional twin","MBT 0.022","Passive SL","MBT 0.022"],
+ ["Time","—","30 mo","?24–30 est.","18.5 mo","20–22 est."]
+]};
+const RAPID = [
+ ["What is Af, and why does it matter?","Temperature at which NiTi is fully austenitic: below it the wire is soft to engage; at mouth temperature it delivers force.","p654–655"],
+ ["What is hysteresis?","Unloading plateau is lower than loading: the tooth receives less force than was needed to activate the wire.","p654, Fig 10.28"],
+ ["Halve the interbracket span: stiffness?","Increases 8× (stiffness ∝ 1/L³).","p651–652"],
+ ["Why is TMA weldable but NiTi not?","TMA can be true-welded without losing properties; NiTi cannot be soldered or welded.","p653–654"],
+ ["Critical contact angle?","Wire–slot angle beyond which binding starts.","p334–335"],
+ ["Centre of resistance, upper incisor?","About 40% of root length from the alveolar crest.","p307–313"],
+ ["M/F ratio for bodily movement?","About 10:1.","p309–313"],
+ ["Three maxillary TAD sites?","Buccal between 5 and 6, infrazygomatic crest, anterior palate.","p721–722"],
+ ["TPA vs Nance?","TPA: rotation, torque, transverse control. Nance adds palatal-vault AP anchorage.","p341–343"],
+ ["Andrews’ six keys?","Molar relation, crown angulation, crown inclination, no rotations, tight contacts, flat Spee.","Box 2.2 p58"],
+ ["MBT upper incisor torque?","+17°, more than Roth, to resist retroclination during retraction.","p679–682"],
+ ["Self-ligation evidence?","No difference in rate, treatment time or visits.","WITE 10.3 p646"],
+ ["Mills’ correction and when invalid?","±0.5° ANB per degree SNA differs from 81°; not if SN–MxP outside 8 ± 3°.","p428–429"],
+ ["Sella placed too high or low: effect?","SN rotates; SNA and SNB change equally; ANB unchanged.","p429"],
+ ["Nasion placed more anteriorly: effect?","SNA falls and ANB changes.","p428"],
+ ["Wits norms by sex?","Males BO 1 mm ahead of AO; females coincide.","p431"],
+ ["Expected L1–MP in a high angle?","120 − MMPA.","p436"],
+ ["LAFH as % of TAFH?","About 55%.","p433"],
+ ["Lower lip to E-line at 13 years?","About −2.5 mm (−5 mm in early 20s).","p457"],
+ ["Interincisal angle norm (Eastman)?","135 ± 10°.","p439"],
+ ["Björk mandibular stable structures?","Anterior chin, inner symphyseal cortex, trabeculae, mandibular canal, molar germs before root formation.","p474"],
+ ["PHV vs menarche?","PHV about 1 year before menarche.","p231–235"],
+ ["What is CSF?","Circumferential supracrestal fibrotomy; reduces rotational relapse, especially upper incisors.","p976"],
+ ["PAR “greatly improved”?","A reduction of 22 points or more.","p107–110"]
+];
+const HBMAP = [
+ ["Risks: demineralisation, root resorption, allergy, TMD","Ch 2","92–104","Fig 2.20, 2.21; WITE 2.2 p101; 2.3 p104"],
+ ["IOTN, PAR, ICON","Ch 2","105–111","DHC grades p108"],
+ ["Growth spurt, maturity indicators, CVM","Ch 4","226–242","Menarche, voice p235; CVM p237–241"],
+ ["Biology of tooth movement, root resorption","Ch 6","287–306","WITE 6.1 p296"],
+ ["Force systems, centre of resistance, friction","Ch 6","307–335",""],
+ ["Anchorage, TPA, Nance, elastics, headgear","Ch 6","336–351","Fig 6.37 p341; 6.40 p344"],
+ ["Examination, NLA, asymmetry, Bolton","Ch 7","367–394","NLA p377; Bolton p385"],
+ ["Ceph landmarks and tracing","Ch 7","419–421","Fig 7.33"],
+ ["Reference planes: FH, SN, MxP, OP, MP","Ch 7","418–427","Fig 7.36–7.39"],
+ ["ANB, Mills’ correction, Wits, Ballard","Ch 7","426–436","Table 7.4; Fig 7.40–7.44"],
+ ["Vertical: MMPA, FMPA, face heights, Björk polygon","Ch 7","432–440","Fig 7.45–7.47"],
+ ["Incisors, A–Pog, interincisal","Ch 7","436–444","Fig 7.48–7.51"],
+ ["Analyses: Downs, Steiner, McNamara, Eastman","Ch 7","442–461","Fig 7.52–7.58"],
+ ["Soft tissue ceph: E-line, NLA","Ch 7","457–458",""],
+ ["Ceph error","Ch 7","459–462","Fig 7.60"],
+ ["Superimposition: cranial base, maxilla, mandible","Ch 7","462–477","Fig 7.61–7.67"],
+ ["Timing, camouflage, space analysis, extraction","Ch 8","483–536","Box 8.3 p491; Box 8.6 p507; Table 8.5 p516"],
+ ["Functional appliances","Ch 9","539–611","WITE 9.4–9.10; caution p600"],
+ ["Brackets, slot, self-ligation","Ch 10","629–647","WITE 10.2 p639; 10.3 p646"],
+ ["Archwires","Ch 10","647–660","Fig 10.28; WITE 10.4 p655"],
+ ["Prescriptions, torque play","Ch 10","676–686","Fig 10.48 p681; 9° p686"],
+ ["Levelling, lacebacks, space closure, finishing","Ch 10","687–701","WITE 10.6 p699; Fig 10.60"],
+ ["Miniscrews (TADs)","Ch 11","706–732","Failure p713–719"],
+ ["Overjet, bimaxillary protrusion","Ch 13","902–924","WITE 13.5 p914"],
+ ["Overbite, open bite","Ch 13","925–948","Fig 13.40 p934"],
+ ["Relapse and retention","Ch 13","974–990","CSF p976; WITE 13.8 p989"],
+ ["Clear aligners","Ch 14","991–1033","WITE 14.1 p999"],
+ ["Class II surgery","Ch 15","1086–1098",""]
+];
+/* ===================== RENDERING ===================== */
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const fmt = s => esc(s).replace(/==(.+?)==/g,"<mark>$1</mark>").replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
+const store = {
+  get(k){ try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+};
+let done = store.get("vivaDone2") || {};
+const chipFor = c => c==="A"?"c-A":c==="B"?"c-B":c==="C"?"c-C":"c-T";
+const hbChips = arr => (arr||[]).map(x=>`<span class="chip c-hb">${esc(x)}</span>`).join("");
+
+function qCard(item, c){
+  const hy = item.hy ? `<span class="chip c-hy">High-yield</span>` : "";
+  const test = item.t ? `<div class="testing"><b>Examiner is testing:</b> ${fmt(item.t)}</div>` : "";
+  const isDone = !!done[item.id];
+  return `<article class="q${isDone?" done":""}" data-c="${c}" data-id="${item.id}" data-hy="${item.hy?1:0}">
+    <div class="qtop"><span class="chip ${chipFor(c)}">${item.id}</span><span class="chip c-gray">${esc(item.cat)}</span>${hy}<span class="spacer"></span>
+    <label class="tick"><input type="checkbox" ${isDone?"checked":""} data-done="${item.id}"> Revised</label></div>
+    <div class="qtext">${fmt(item.q)}</div>
+    <button class="reveal" data-reveal>Show answer</button>
+    ${test}
+    <div class="answer"><span class="lab">Answer points</span><ul>${item.a.map(x=>`<li>${fmt(x)}</li>`).join("")}</ul></div>
+    <div class="hbrow"><span class="lab">Handbook</span>${hbChips(item.h)}</div>
+  </article>`;
+}
+function modelCard(m, c){
+  const isDone = !!done[m.id];
+  const lines = arr => { const out=[]; let ul=[]; const flush=()=>{ if(ul.length){ out.push(`<ul>${ul.map(x=>`<li>${fmt(x)}</li>`).join("")}</ul>`); ul=[]; } };
+    arr.forEach(x=>{ if(x.startsWith("• ")) ul.push(x.slice(2)); else { flush(); out.push(`<p>${fmt(x)}</p>`); } }); flush(); return out.join(""); };
+  const step = (cls,label,arr) => `<div class="step"><span class="chip ${cls}">${label}</span><div>${lines(arr)}</div></div>`;
+  return `<article class="q model${isDone?" done":""}" data-c="${c}" data-id="${m.id}" data-hy="1">
+    <div class="qtop"><span class="chip ${chipFor(c)}">${m.id.replace("-T"," · Theme ")}</span><span class="chip c-hy">Model answer</span><span class="spacer"></span>
+    <label class="tick"><input type="checkbox" ${isDone?"checked":""} data-done="${m.id}"> Revised</label></div>
+    <div class="mtitle">${fmt(m.title)}</div>
+    <button class="reveal" data-reveal>Show model answer</button>
+    <div class="answer plain">
+      <div class="steps">${step("c-trap","1 Acknowledge",m.ack)}${step("c-T","2 Explain",m.exp)}${step("c-hb","3 Cite",m.cite)}${step("c-ans","4 Reflect",m.ref)}</div>
+      <div class="fu"><span class="lab">Likely follow-ups</span>${m.fu.map(([q,a])=>`<p><span class="fq">“${esc(q)}”</span> ${fmt(a)}</p>`).join("")}</div>
+    </div>
+    <div class="hbrow"><span class="lab">Handbook</span>${hbChips(m.h)}</div>
+  </article>`;
+}
+function table(head, rows, opts={}){
+  return `<div class="tw"><table><thead><tr>${head.map(h=>`<th scope="col">${esc(h)}</th>`).join("")}</tr></thead><tbody>${
+    rows.map(r=>`<tr>${r.map((cell,i)=>{
+      let v=String(cell), cls=[];
+      if(opts.flag && v.startsWith("!")){ cls.push("big"); v=v.slice(1); }
+      else if(opts.flag && v.startsWith("?")){ cls.push("odd"); v=v.slice(1); }
+      if(opts.num && i>0) cls.push("num");
+      return `<td class="${cls.join(" ")}">${opts.raw?v:fmt(v)}</td>`;
+    }).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+const sevMap = {must:["c-trap","Must fix"],should:["c-warn","Should fix"],tidy:["c-gray","Tidy up"],prep:["c-T","Prepare answer"]};
+function fixCards(list){
+  return list.map(([s,issue,where,todo])=>`<div class="fix"><span class="chip ${sevMap[s][0]} sev">${sevMap[s][1]}</span>
+    <div class="issue">${fmt(issue)}</div><div class="where">Where: ${esc(where)}</div><div class="do"><b>Fix:</b> ${fmt(todo)}</div></div>`).join("");
+}
+const sectionHead = (title, extra="") => `<div class="sechead"><h2>${esc(title)}</h2>${extra}</div>`;
+const steps4 = `<div class="steps" style="margin:0">
+  <div class="step"><span class="chip c-trap">1 Acknowledge</span><div><p>State the fact with its number. Don’t defend it.</p></div></div>
+  <div class="step"><span class="chip c-T">2 Explain</span><div><p>Give the reasoning or the mechanism.</p></div></div>
+  <div class="step"><span class="chip c-hb">3 Cite</span><div><p>Quote the evidence or the handbook page.</p></div></div>
+  <div class="step"><span class="chip c-ans">4 Reflect</span><div><p>Say what you’d do now, and next time.</p></div></div></div>`;
+
+/* ---------- ceph geometry ---------- */
+const gp = k => Array.isArray(k) ? k : P[k];
+function seg(id){ const [a,b,ea,eb]=LINES[id]; const A=gp(a), B=gp(b); const dx=B[0]-A[0], dy=B[1]-A[1];
+  return [A[0]-dx*ea, A[1]-dy*ea, B[0]+dx*eb, B[1]+dy*eb]; }
+function inter(l1,l2){ const [x1,y1,x2,y2]=seg(l1), [x3,y3,x4,y4]=seg(l2);
+  const d=(x1-x2)*(y3-y4)-(y1-y2)*(x3-x4); if(Math.abs(d)<1e-9) return null;
+  const t=((x1-x3)*(y3-y4)-(y1-y3)*(x3-x4))/d; return [x1+t*(x2-x1), y1+t*(y2-y1)]; }
+function foot(p,l){ const [x1,y1,x2,y2]=seg(l); const dx=x2-x1, dy=y2-y1; const t=((p[0]-x1)*dx+(p[1]-y1)*dy)/(dx*dx+dy*dy); return [x1+t*dx, y1+t*dy]; }
+function arcPath(V,P1,P2,r){
+  let a1=Math.atan2(P1[1]-V[1],P1[0]-V[0]), a2=Math.atan2(P2[1]-V[1],P2[0]-V[0]);
+  let d=a2-a1; while(d<=-Math.PI) d+=2*Math.PI; while(d>Math.PI) d-=2*Math.PI;
+  const s=[V[0]+r*Math.cos(a1), V[1]+r*Math.sin(a1)], e=[V[0]+r*Math.cos(a1+d), V[1]+r*Math.sin(a1+d)];
+  return `M ${s[0].toFixed(1)} ${s[1].toFixed(1)} A ${r} ${r} 0 0 ${d>0?1:0} ${e[0].toFixed(1)} ${e[1].toFixed(1)}`;
+}
+const OUT = [
+ "M 470 150 C 430 70, 300 45, 190 70 C 110 90, 70 150, 72 220 C 74 270, 95 300, 120 318",
+ "M 470 150 C 482 160, 487 170, 482 178 C 492 200, 505 225, 515 248",
+ "M 176 194 C 178 230, 240 234, 242 198",
+ "M 242 198 C 252 192, 264 190, 282 191 L 360 186 C 400 181, 440 176, 466 172",
+ "M 270 296 C 258 318, 260 340, 268 352 C 276 336, 282 316, 280 296",
+ "M 268 352 C 330 362, 420 352, 488 338 C 476 348, 466 360, 467 380 C 468 398, 478 410, 486 426",
+ "M 268 352 C 300 368, 360 382, 410 390 C 432 394, 448 404, 458 424",
+ "M 474 474 C 466 492, 452 504, 452 520 C 452 542, 470 556, 468 576 C 467 588, 462 594, 457 598 C 450 605, 443 608, 436 609 C 380 607, 300 590, 250 556 C 232 540, 224 505, 218 450 C 214 410, 208 360, 204 318 C 200 300, 198 290, 206 284 C 216 280, 224 290, 222 308 C 232 322, 246 332, 262 330 C 276 318, 290 306, 300 300 C 304 340, 318 400, 336 448",
+ "M 446 490 C 430 515, 428 568, 440 600"
+];
+const SOFT = "M 500 70 C 512 120, 514 160, 506 178 C 522 220, 548 268, 566 300 C 568 318, 554 330, 541 333 C 532 337, 522 342, 516 348 C 514 378, 524 400, 521 420 C 519 444, 510 456, 505 462 C 512 470, 520 482, 516 492 C 512 512, 496 520, 493 530 C 494 556, 506 572, 502 584 C 498 610, 482 628, 470 632 C 440 644, 400 646, 360 660";
+const TEETH = [
+ "M 440 370 C 460 382, 482 402, 491 428 C 494 446, 489 460, 481 468 C 470 461, 457 449, 453 432 C 447 410, 443 390, 440 370 Z",
+ "M 430 540 C 442 520, 452 498, 459 478 C 461 468, 464 462, 470 458 C 479 468, 480 488, 473 506 C 462 524, 446 536, 430 540 Z",
+ "M 326 410 L 376 410 C 380 422, 378 434, 372 442 L 330 442 C 324 434, 322 422, 326 410 Z",
+ "M 330 448 L 382 448 C 386 460, 384 474, 378 482 L 336 482 C 330 474, 328 460, 330 448 Z",
+ "M 396 416 L 420 416 C 424 428, 422 440, 418 447 L 398 447 C 394 440, 392 428, 396 416 Z",
+ "M 398 451 L 422 453 C 426 463, 424 475, 420 482 L 400 480 C 396 472, 394 461, 398 451 Z"
+];
+const LBL = {S:[-14,-10],N:[8,-6],Po:[-26,-8],Or:[8,14],Ar:[-24,4],PNS:[-34,16],ANS:[6,-6],A:[-16,4],Is:[8,10],UIA:[-34,-4],Ii:[-18,14],LIA:[-34,8],
+  B:[-16,4],Pog:[8,4],Gn:[8,12],Me:[-10,18],Go:[-26,10],Ms:[-18,-10],Mi:[-8,18],Prn:[8,4],Cm:[-6,-8],Sn:[-26,6],Ls:[8,4],Li:[8,4],PogS:[8,6]};
+const PTNAME = {PogS:"Pog′"};
+function cephSVG(){
+  const lines = Object.keys(LINES).map(id=>{ const [x1,y1,x2,y2]=seg(id); return `<line class="pl" data-l="${id}" x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"/>`; }).join("");
+  const pts = Object.keys(P).map(k=>{ const [x,y]=P[k], o=LBL[k]||[8,-6], soft=LM[k]&&LM[k].soft;
+    return `<g class="pt${soft?" soft":""}" data-p="${k}" tabindex="0" role="button" aria-label="${esc(LM[k]?LM[k].n:k)}"><circle cx="${x}" cy="${y}" r="4.5"/><text x="${x+o[0]}" y="${y+o[1]}">${PTNAME[k]||k}</text></g>`; }).join("");
+  return `<svg viewBox="40 40 560 640" role="img" aria-label="Schematic lateral cephalometric tracing with landmarks and planes">
+   <g>${OUT.map(d=>`<path class="outline" d="${d}"/>`).join("")}
+   <ellipse class="outline" cx="418" cy="228" rx="34" ry="34"/><circle class="outline" cx="124" cy="268" r="11"/>
+   <path class="outline st" d="${SOFT}"/>${TEETH.map(d=>`<path class="tooth" d="${d}"/>`).join("")}</g>
+   <g id="cl">${lines}</g><g id="caux"></g><g id="carc"></g><g id="cpt">${pts}</g></svg>`;
+}
+function setCeph(kind,id){
+  const svg=document.querySelector(".cephfig svg"); if(!svg) return;
+  svg.querySelectorAll(".pl").forEach(l=>l.classList.remove("on"));
+  svg.querySelectorAll(".pt").forEach(p=>p.classList.remove("on"));
+  const aux=svg.querySelector("#caux"), arc=svg.querySelector("#carc"); aux.innerHTML=""; arc.innerHTML="";
+  document.querySelectorAll(".mbtn").forEach(b=>b.setAttribute("aria-pressed", b.dataset.k===kind && b.dataset.id===id ? "true":"false"));
+  const on = (ls,ps)=>{ ls.forEach(l=>{ const e=svg.querySelector(`[data-l="${l}"]`); if(e) e.classList.add("on"); });
+    ps.forEach(p=>{ const e=svg.querySelector(`[data-p="${p}"]`); if(e) e.classList.add("on"); }); };
+  const L = (a,b)=>`<line class="aux on" x1="${a[0].toFixed(1)}" y1="${a[1].toFixed(1)}" x2="${b[0].toFixed(1)}" y2="${b[1].toFixed(1)}"/>`;
+  const dot = (p,t)=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.5" fill="var(--ceph)"/>${t?`<text x="${(p[0]+6).toFixed(1)}" y="${(p[1]+14).toFixed(1)}" font-size="11" font-weight="700" fill="var(--ceph)">${t}</text>`:""}`;
+  const panel=document.getElementById("cpanel");
+  if(kind==="m"){
+    const m=MEAS.find(x=>x.id===id); on(m.lines,m.pts);
+    if(m.arc){ let V = m.arc.v ? P[m.arc.v] : inter(m.arc.x[0],m.arc.x[1]);
+      if(V && V[0]>40 && V[0]<600 && V[1]>40 && V[1]<680) arc.innerHTML=`<path class="arc" d="${arcPath(V,gp(m.arc.r1),gp(m.arc.r2),m.id==="ANB"?70:34)}"/>`; }
+    if(m.aux==="wits"){ const ao=foot(P.A,"OP"), bo=foot(P.B,"OP"); aux.innerHTML=L(P.A,ao)+L(P.B,bo)+dot(ao,"AO")+dot(bo,"BO"); }
+    if(m.aux==="fh"){ const fn=foot(P.N,"MxP"), fm=foot(P.Me,"MxP"); aux.innerHTML=L(P.N,fn)+L(fm,P.Me)+dot(fn,"")+dot(fm,"")+
+      `<text x="${(fn[0]+8).toFixed(0)}" y="${((P.N[1]+fn[1])/2).toFixed(0)}" font-size="11" font-weight="700" fill="var(--ceph)">UAFH</text><text x="${(fm[0]+8).toFixed(0)}" y="${((fm[1]+P.Me[1])/2).toFixed(0)}" font-size="11" font-weight="700" fill="var(--ceph)">LAFH</text>`; }
+    if(m.aux==="apog"){ const f=foot(P.Ii,"APog"); aux.innerHTML=L(P.Ii,f)+dot(f,""); }
+    if(m.aux==="elip"){ const f=foot(P.Li,"E"); aux.innerHTML=L(P.Li,f)+dot(f,""); }
+    const v=m.vals.map(x=>x.startsWith("!")?`<span style="color:var(--trap)">${esc(x.slice(1))}</span>`:esc(x));
+    panel.innerHTML=`<span class="kind">Measurement · ${esc(m.g)}</span><h4>${esc(m.n)}</h4><p>${fmt(m.d)}</p>
+      <div class="norms"><span class="chip c-C">Handbook: ${esc(m.hb)}</span><span class="chip c-gray">${esc(m.rec)}</span></div>
+      <div class="vals"><div class="v A"><b>Case A · Z.C.K. (T0 → T1)</b><span class="n">${v[0]} → ${v[1]}${m.u}</span></div>
+      <div class="v B"><b>Case B · W.T.N. (T0 → T1)</b><span class="n">${v[2]} → ${v[3]}${m.u}</span></div></div>
+      <p>${fmt(m.m)}</p><div class="trapline"><b>Viva trap:</b> ${fmt(m.trap)}</div>
+      <div class="hbrow"><span class="lab">Handbook</span><span class="chip c-hb">${esc(m.pg)}</span></div>`;
+  } else if(kind==="pl"){
+    const pl=PLANES[id]; on([id],LINES[id].slice(0,2).filter(x=>typeof x==="string"));
+    panel.innerHTML=`<span class="kind">Reference plane</span><h4>${esc(pl.n)}</h4><p>${fmt(pl.d)}</p><div class="trapline"><b>Viva point:</b> ${fmt(pl.tip)}</div><div class="hbrow"><span class="lab">Handbook</span><span class="chip c-hb">${esc(pl.pg)}</span></div>`;
+  } else if(kind==="p"){
+    const l=LM[id]; on([],[id]);
+    panel.innerHTML=`<span class="kind">${l.soft?"Soft-tissue":"Hard-tissue"} landmark</span><h4>${esc(l.n)}</h4><p>${fmt(l.d)}</p><div class="trapline"><b>Viva point:</b> ${fmt(l.tip)}</div><div class="hbrow"><span class="lab">Handbook</span><span class="chip c-hb">${esc(l.pg)}</span></div>`;
+  }
+}
+function cephSection(){
+  const groups = [...new Set(MEAS.map(m=>m.g))];
+  const ctl = groups.map(g=>`<div class="grp"><div class="gl">${esc(g)}</div><div class="btns">${MEAS.filter(m=>m.g===g).map(m=>`<button class="mbtn" data-k="m" data-id="${m.id}" aria-pressed="false">${esc(m.n)}</button>`).join("")}</div></div>`).join("")
+   + `<div class="grp"><div class="gl">Reference planes</div><div class="btns">${Object.keys(PLANES).map(k=>`<button class="mbtn" data-k="pl" data-id="${k}" aria-pressed="false">${esc(PLANES[k].n.split(" (")[0])}</button>`).join("")}</div></div>`;
+  const mrows = MEAS.map(m=>[`**${m.n}**`, m.d, m.hb, m.rec, `${m.vals[0]} → ${m.vals[1]}`, `${m.vals[2]} → ${m.vals[3]}`, m.pg].map(x=>x.replace(/!/g,"")));
+  const lrows = Object.keys(LM).map(k=>[`**${LM[k].n}**`, LM[k].d, LM[k].tip, LM[k].pg]);
+  const prows = Object.keys(PLANES).map(k=>[`**${PLANES[k].n}**`, PLANES[k].d, PLANES[k].tip, PLANES[k].pg]);
+  return `${sectionHead("Cephalometrics: points, planes and relationships",`<span class="progress" data-prog="C"></span>`)}
+   <p class="lead">Tap a measurement, plane or landmark: the diagram highlights how it is constructed, and the panel gives the handbook norm, your records’ norm, both cases’ values and the viva trap. Red values are the ones examiners will challenge.</p>
+   <div class="ceph"><div class="cephfig">${cephSVG()}<div class="cap">Schematic tracing (not to scale). Hard tissue grey, soft tissue light grey, constructions orange.</div></div>
+   <div class="cephctl">${ctl}<div class="panel" id="cpanel" aria-live="polite"></div></div></div>
+   <div class="box trap"><p><strong>The ceph points to master:</strong> the retraced films pass the sella check, so Mills’ correction applies. In <mark>Case A</mark>, ANB rose 2.6 → 6.2° because SNA rose while SNB held: A point moved forward as the incisor apices moved labially, not a skeletal change. In <mark>Case B</mark>, MMPA is unchanged but SN–MxP rose 3°, so the mandibular plane rotated ~3° clockwise relative to SN: the vertical was not fully controlled.</p></div>
+   <h3 class="print-only-g">Diagram for every measurement</h3><div class="cephgallery" id="cgal"></div>
+   <h3>Apply it to your cases</h3>
+   <div class="grid2"><div class="box A"><h4>Case A · Z.C.K.</h4><ul>${APPLY.A.map(x=>`<li>${fmt(x)}</li>`).join("")}</ul></div>
+   <div class="box B"><h4>Case B · W.T.N.</h4><ul>${APPLY.B.map(x=>`<li>${fmt(x)}</li>`).join("")}</ul></div></div>
+   <h3>Rules and relationships</h3>
+   <div class="grid2">${RULES.map(r=>`<div class="box cephnote"><h4>${esc(r.t)}</h4><ul>${r.b.map(x=>`<li>${fmt(x)}</li>`).join("")}</ul><div class="hbrow"><span class="lab">Handbook</span><span class="chip c-hb">${esc(r.pg)}</span></div></div>`).join("")}</div>
+   <h3>Measurement reference</h3>${table(["Measure","Construction","Handbook norm","Records norm","A T0 → T1","B T0 → T1","Page"],mrows)}
+   <h3>Landmarks</h3>${table(["Landmark","Definition","Viva point","Page"],lrows)}
+   <h3>Reference planes</h3>${table(["Plane","Construction","Viva point","Page"],prows)}
+   <h3>Ceph viva questions</h3>${CEPHQ.map(q=>qCard(q,"C")).join("")}`;
+}
+
+/* ---------- sections ---------- */
+const sections = [];
+sections.push({id:"start",c:"H",nav:"Start here",html:`
+ ${sectionHead("Start here")}
+ <p class="lead">Revised from the latest log case records (26/10/2026, third revision: cephs retraced): <strong>Case A is now Z.C.K.</strong> and <strong>Case B is now W.T.N.</strong> Clear the <strong>Fix before the exam</strong> list first, then drill the <mark>high-yield</mark> and model-answer cards, then the cephalometrics section.</p>
+ <div class="legend" aria-label="Colour key">
+  <span class="chip c-A">Case A · Z.C.K.</span><span class="chip c-B">Case B · W.T.N.</span><span class="chip c-C">Cephalometrics</span><span class="chip c-T">Topic bank</span>
+  <span class="chip c-test">Examiner is testing</span><span class="chip c-ans">Answer points</span><span class="chip c-hb">Handbook page</span>
+  <span class="chip c-hy">High-yield</span><span class="chip c-trap">Must fix</span><span class="chip c-warn">Should fix</span>
+ </div>
+ <div class="box note"><p>${esc(HB_NOTE)}</p></div>
+ <h3>What changed in the latest revision</h3>
+ <div class="grid2">
+  <div class="box A"><h4>Case A · Z.C.K.</h4><ul><li>Ceph <mark>retraced</mark>: T0 SNA 78.7°, SNB 76.1°, ANB 2.6°, SN–MxP 9.9° (valid), LAFH 54.5%, Wits +1.6 mm, L1–APog 7.2 mm. T1 ANB 6.2° (SNA up, SNB stable).</li><li>Appliance now <mark>conventional MBT twin brackets</mark> (earlier versions said self-ligating).</li><li>Space closure moved from 0.017 × 0.025 to 0.019 × 0.025 SS.</li><li>New: 36 bracket too gingival; plan rebonds 12 and 45.</li><li>Estimated total now 24–30 months, although he is already at 30 months.</li></ul></div>
+  <div class="box B"><h4>Case B · W.T.N.</h4><ul><li>Ceph <mark>retraced</mark>: T0 SNA 79°, SNB 74.5°, ANB 4.5°, SN–MxP 8° (valid), LAFH 56.3%, Wits +2.3 mm. T1 ANB 5.1°, SN–MxP 11°, Wits −0.5 mm.</li><li>Summary now says <mark>Class II skeletal base</mark>; appliance <mark>passive self-ligating</mark>; space closure on 0.019 × 0.025 SS; light Class II elastics.</li><li>U4/L5 recorded as the alternative; 21 bypassed until space was created; buccally tilted 17 and 27 noted.</li><li>Still: bond-up 11/10/2025 (wrong), no plan for the left Class II, plan steps back to 0.017 × 0.025.</li></ul></div>
+ </div>
+ <h3>A typical 15-minute case viva</h3>
+ <ol class="flow">
+  <li><span class="t">0–2 min</span><span>“Tell us about this patient” → your 90-second script, ending with the plan.</span></li>
+  <li><span class="t">2–5 min</span><span>Diagnosis and cephalometrics → classification, norms, growth, tracing reliability.</span></li>
+  <li><span class="t">5–9 min</span><span>Plan and mechanics → extraction, anchorage, wires, elastics.</span></li>
+  <li><span class="t">9–12 min</span><span>Progress and complications → torque loss, vertical, residual Class II.</span></li>
+  <li><span class="t">12–15 min</span><span>Reflection and general knowledge → wires, TADs, retention.</span></li>
+ </ol>
+ <h3>Golden rules</h3>
+ <div class="box trap"><p><strong>Never defend an error in your own record.</strong> Say: “On reflection that’s a transcription error; the correct value is…”</p><p>Lead with the complaint, close with what you’d change. Quote one reference per claim. If unsure, reason from first principles.</p></div>
+ <h3>The four-step answer for any weak point</h3>
+ <div class="box">${steps4}<p style="margin-top:10px">Worked examples open each case section: <a href="#m-A" data-jump="m-A">Case A</a> and <a href="#m-B" data-jump="m-B">Case B</a>.</p></div>
+ <h3>Opening scripts</h3>
+ <div class="box A"><h4>Case A · Z.C.K.</h4><p>${SCRIPT_A}</p></div>
+ <div class="box B"><h4>Case B · W.T.N.</h4><p>${SCRIPT_B}</p></div>
+`});
+sections.push({id:"fix",c:"F",nav:"Fix before the exam",html:`
+ ${sectionHead("Fix before the exam")}
+ <p class="lead">Based on the updated records. Correct them if you still can; otherwise acknowledge each in one sentence. Green chips show what the update already fixed.</p>
+ <h3><span class="chip c-A">Case A · Z.C.K.</span></h3>
+ <div class="resolved">${RESOLVED.A.map(x=>`<span class="chip c-ans">Fixed: ${esc(x)}</span>`).join("")}</div>${fixCards(FIXES.A)}
+ <h3><span class="chip c-B">Case B · W.T.N.</span></h3>
+ <div class="resolved">${RESOLVED.B.map(x=>`<span class="chip c-ans">Fixed: ${esc(x)}</span>`).join("")}</div>${fixCards(FIXES.B)}
+ <h3>Both cases</h3>${fixCards(FIXES.both)}
+`});
+function caseSec(id,c,title,themes,list){
+  return {id,c,nav:title,count:1,html:`
+   ${sectionHead(title,`<span class="progress" data-prog="${c}"></span>`)}
+   <div class="box trap"><p><strong>Big themes:</strong> ${themes}</p></div>
+   <h3 id="m-${c}">Model answers to the big themes</h3>
+   <p class="lead">Answer each in 60–90 seconds, following the four coloured steps. Then let the examiner probe.</p>
+   ${MODEL[c].map(m=>modelCard(m,c)).join("")}
+   <h3>Full question bank</h3>
+   <div class="qlist">${list.map(x=>qCard(x,c)).join("")}</div>`};
+}
+sections.push(caseSec("caseA","A","Case A · Z.C.K.","extraction and anchorage planning in a Class I case with bimaxillary protrusion; ~31° upper incisor torque loss with a deepened bite; right molar slipping to half-unit Class II; ANB rising to 6.2° through A-point remodelling.",CASE_A));
+sections.push(caseSec("caseB","B","Case B · W.T.N.","four premolars in a high-angle girl; whether the vertical was really controlled with Class II elastics; incisor over-retroclination with 41–43 spacing; classifying a mild Class II base now that Mills’ correction applies.",CASE_B));
+sections.push({id:"ceph",c:"C",nav:"Cephalometrics",count:1,html:"__CEPH__"});
+sections.push({id:"topics",c:"T",nav:"Topic bank",count:1,html:`
+ ${sectionHead("Topic bank",`<span class="progress" data-prog="T"></span>`)}
+ <p class="lead">General questions your cases will trigger. Bridge naturally: “In my case B, this is exactly why…”</p>
+ ${TOPICS.map(t=>`<div id="t-${t.id}"><h3>${esc(t.title)}</h3>
+   <div class="hbrow" style="margin:-4px 0 10px"><span class="lab">Handbook</span>${hbChips(t.h)}</div>
+   ${t.blocks.map(b=> b.type==="q"?qCard(b,"T") : b.type==="table"?table(b.head,b.rows) : b.type==="formula"?`<div class="formula">${esc(b.text)}</div>` : `<div class="box note"><p>${fmt(b.text)}</p></div>`).join("")}
+ </div>`).join("")}
+`});
+sections.push({id:"reference",c:"H",nav:"Quick reference",html:`
+ ${sectionHead("Quick reference")}
+ <p class="lead">Memorise the change figures. <span class="chip c-trap">Red</span> = real changes examiners will challenge. <span class="chip c-warn">Orange</span> = record inconsistencies to explain.</p>
+ ${table(QREF.head,QREF.rows,{num:true,flag:true})}
+ <div class="box A"><p><strong>Case A in one line:</strong> extraction justified by lower crowding and protrusion, but low upper anchorage demand plus Class II elastics over-retracted the uppers, deepened the bite and slipped the right molar.</p></div>
+ <div class="box B"><p><strong>Case B in one line:</strong> overjet and lips corrected in a high-angle girl, but torque was lost, the left side stayed Class II, and SN–MxP +3° with an unchanged MMPA shows a small clockwise mandibular rotation.</p></div>
+ <h3>Rapid-fire flashcards <span class="progress">tap a card to reveal</span></h3>
+ <div class="cards">${RAPID.map((r,i)=>`<button class="card" type="button"><span class="n">${i+1}</span><span>${esc(r[0])}</span><span class="fa">${esc(r[1])}</span><span class="chip c-hb" style="align-self:flex-start">${esc(r[2])}</span><span class="hint">Tap to reveal</span></button>`).join("")}</div>
+ <h3>Model answer: “What have you learned from these two cases?”</h3>
+ <div class="box note"><p>“Both cases taught me that <mark>torque control during space closure</mark> is the weak point of sliding mechanics in a 0.022 slot, and that <mark>anchorage must be planned per arch</mark>. In Z.C.K. the upper demand was low, yet I reinforced it with Class II elastics; in W.T.N. the demand was high, but elastics were the wrong tool in a high angle. I’d now use a full-size working wire with power arms, TADs where anchorage matters, and a consistently traced progress ceph by 12 months.”</p></div>
+ <h3>A closing line that links both cases</h3>
+ <div class="box note"><p>“Both cases show the same lesson: sliding mechanics in a 0.022 slot need a <mark>full-size working wire</mark> and an <mark>anchorage plan built on a written space analysis</mark>. In Z.C.K. the cost was excess upper retraction; in W.T.N. it was the vertical risk. Both ended in torque loss.”</p></div>
+`});
+sections.push({id:"handbook",c:"H",nav:"Handbook map",html:`
+ ${sectionHead("Handbook map")}
+ <p class="lead">${esc(HB_NOTE)}</p>
+ ${table(["Topic","Chapter","PDF pages","Figures and boxes"],HBMAP)}
+ <div class="box note"><p>Figures matched to the handbook: torque play <mark>9°</mark> for 0.019 × 0.025 SS (p686); fixed retainer failure <mark>12–50%</mark> multistrand (p984); miniscrew failure <mark>site-dependent</mark> (p717); Mills’ correction invalid if SN–MxP is outside 8 ± 3° (p429); Wits: males −1 mm, females 0 mm (p431).</p></div>
+`});
+
+/* ---------- mount ---------- */
+const main=document.getElementById("main"), nav=document.getElementById("nav");
+main.innerHTML = sections.map(s=>`<section class="sec" id="${s.id}" data-c="${s.c}">${s.html==="__CEPH__"?cephSection():s.html}</section>`).join("");
+nav.innerHTML = sections.map(s=>`<a href="#${s.id}" data-c="${s.c}" data-go="${s.id}"><span>${esc(s.nav)}</span>${s.count?`<span class="p" data-navprog="${s.c}"></span>`:""}</a>`
+  + (s.id==="topics" ? TOPICS.map(t=>`<a class="sub" href="#t-${t.id}" data-go="t-${t.id}"><span>${esc(t.title)}</span></a>`).join("")
+   : (s.id==="caseA"||s.id==="caseB") ? `<a class="sub" href="#m-${s.c}" data-go="m-${s.c}"><span>Model answers</span></a>` : "")).join("");
+const scrollTo = id => { const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:"smooth",block:"start"}); };
+nav.addEventListener("click",e=>{ const a=e.target.closest("[data-go]"); if(!a) return; e.preventDefault(); scrollTo(a.dataset.go); });
+
+const allQ = () => [...document.querySelectorAll(".q")];
+function updateProgress(){
+  ["A","B","C","T"].forEach(c=>{
+    const qs=allQ().filter(q=>q.dataset.c===c), n=qs.filter(q=>done[q.dataset.id]).length;
+    document.querySelectorAll(`[data-prog="${c}"]`).forEach(el=>el.innerHTML=`<b>${n}</b> of ${qs.length} revised`);
+    document.querySelectorAll(`[data-navprog="${c}"]`).forEach(el=>el.textContent=`${n}/${qs.length}`);
+  });
+}
+main.addEventListener("change",e=>{
+  const id=e.target.dataset.done; if(!id) return;
+  if(e.target.checked) done[id]=1; else delete done[id];
+  store.set("vivaDone2",done); e.target.closest(".q").classList.toggle("done",e.target.checked);
+  updateProgress(); applyFilters();
+});
+main.addEventListener("click",e=>{
+  if(e.target.matches("[data-reveal]")){ e.target.closest(".q").classList.add("open"); return; }
+  const j=e.target.closest("[data-jump]"); if(j){ e.preventDefault(); scrollTo(j.dataset.jump); return; }
+  const mb=e.target.closest(".mbtn"); if(mb){ setCeph(mb.dataset.k, mb.dataset.id); return; }
+  const pt=e.target.closest(".pt"); if(pt){ setCeph("p", pt.dataset.p); return; }
+  const card=e.target.closest(".card"); if(card) card.classList.toggle("open");
+});
+main.addEventListener("keydown",e=>{ const pt=e.target.closest&&e.target.closest(".pt"); if(pt && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); setCeph("p",pt.dataset.p); } });
+
+const state={self:false,hy:false,todo:false,q:""};
+function setToggle(btn,key){ btn.addEventListener("click",()=>{ state[key]=!state[key]; btn.setAttribute("aria-pressed",state[key]);
+  if(key==="self"){ document.body.classList.toggle("selftest",state.self); allQ().forEach(q=>q.classList.remove("open")); } applyFilters(); }); }
+setToggle(document.getElementById("tSelf"),"self"); setToggle(document.getElementById("tHy"),"hy"); setToggle(document.getElementById("tTodo"),"todo");
+document.getElementById("q").addEventListener("input",e=>{ state.q=e.target.value.trim().toLowerCase(); applyFilters(); });
+function applyFilters(){
+  let shown=0;
+  allQ().forEach(q=>{ const ok=(!state.hy||q.dataset.hy==="1")&&(!state.todo||!done[q.dataset.id])&&(!state.q||q.textContent.toLowerCase().includes(state.q));
+    q.classList.toggle("hidden",!ok); if(ok) shown++; });
+  document.getElementById("count").textContent = (state.hy||state.todo||state.q) ? `${shown} questions shown` : `${allQ().length} questions`;
+}
+const tTheme=document.getElementById("tTheme");
+function isDark(){ const t=document.documentElement.dataset.theme; return t ? t==="dark" : matchMedia("(prefers-color-scheme: dark)").matches; }
+function syncTheme(){ tTheme.textContent = isDark() ? "Light" : "Dark"; }
+const savedTheme=store.get("vivaTheme"); if(savedTheme) document.documentElement.dataset.theme=savedTheme;
+tTheme.addEventListener("click",()=>{ const t=isDark()?"light":"dark"; document.documentElement.dataset.theme=t; store.set("vivaTheme",t); syncTheme(); });
+syncTheme(); updateProgress(); applyFilters();
+(function buildGallery(){ const g=document.getElementById("cgal"), src=document.querySelector(".cephfig svg"); if(!g||!src) return;
+  g.innerHTML = MEAS.map(m=>{ setCeph("m",m.id); const v=m.vals.map(x=>x.replace("!",""));
+    return `<figure>${src.outerHTML}<figcaption><strong>${esc(m.n)}</strong> · ${esc(m.hb)}<br>A ${esc(v[0])} → ${esc(v[1])}${m.u} · B ${esc(v[2])} → ${esc(v[3])}${m.u}</figcaption></figure>`; }).join(""); })();
+setCeph("m","ANB");
+if(location.hash){ const el=document.getElementById(location.hash.slice(1)); if(el) setTimeout(()=>el.scrollIntoView(),50); }
+</script>
+<script>
+if ("serviceWorker" in navigator) { window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(()=>{}); }); }
+</script>
+</body>
+</html>
